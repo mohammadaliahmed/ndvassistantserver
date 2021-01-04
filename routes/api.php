@@ -39,7 +39,13 @@ Route::group(['prefix' => 'ticket'], function () {
     Route::post('homeTickets', 'AppTicketsController@homeTickets');
     Route::post('getDepartments', 'AppTicketsController@getDepartments');
     Route::post('createTicket', 'AppTicketsController@createTicket');
+    Route::post('sendMail', 'AppTicketsController@sendMail');
+    Route::post('notices', 'AppTicketsController@notices');
+    Route::post('getReplies', 'AppTicketsController@getReplies');
+    Route::post('sendReply', 'AppTicketsController@sendReply');
+    Route::post('sendNotification', 'AppTicketsController@sendNotification');
 
 });
 
 Route::post('uploadFile', 'FileUploadController@uploadFile');
+Route::post('uploadFileToUploads', 'FileUploadController@uploadFileToUploads');

@@ -6,6 +6,7 @@
             <div class="main-img-area app">
                 <div class="container">
                     <h1>Ticket Detail</h1>
+
                 </div>
             </div>
         </div>

@@ -4,7 +4,6 @@
 
     <div class="page-content">
         <section id="category-one">
-
             <div class="category-one">
                 <div class="container">
                     <div class="row">
@@ -68,7 +67,7 @@
                             </div>
 
                             <div class="pagination_links clearfix">
-                                {{ $tickets->links() }}
+                                {{--{{ $tickets->links() }}--}}
                             </div>
 
                         </div>
@@ -187,13 +186,17 @@
             })
             .then(function (abctoken) {
                 console.log(abctoken)
+
+
+
+
                 <?php echo e(\Illuminate\Support\Facades\Auth::user()->id)?>;
                 $.ajax({
                     type: 'POST',
                     url: '{{url('/adminFcmKey/')}}',
-                    data:{
+                    data: {
                         'adminId':{{\Illuminate\Support\Facades\Auth::user()->id}},
-                       'fcmKey':abctoken,
+                        'fcmKey': abctoken,
                         '_token': '{{csrf_token()}}'
 
                     },
@@ -205,7 +208,7 @@
                 })
             })
             .catch(function (error) {
-                console.log('error here');
+                console.log('error here' + error);
             })
 
         messaging.onMessage(function (payload) {

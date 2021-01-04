@@ -79,6 +79,36 @@ class UserController extends Controller
 
         }
     }
+
+
+    public function updateProfile(Request $request)
+    {
+
+        if ($request->api_username != Constants::$API_USERNAME || $request->api_password != Constants::$API_PASSOWRD) {
+            return response()->json([
+                'code' => Response::HTTP_FORBIDDEN, 'message' => "Wrong api credentials"
+            ], Response::HTTP_OK);
+        } else {
+            $user = User::find($request->id);
+            $user->name = $request->name;
+            $user->phone = $request->phone;
+            $user->gender = $request->gender;
+            $user->housenumber = $request->housenumber;
+            $user->block = $request->block;
+
+            if ($request->has('liveUrl')) {
+                $user->avatar = $request->liveUrl;
+            }
+            $user->update();
+            return response()->json([
+                'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user
+                ,
+            ], Response::HTTP_OK);
+
+
+        }
+    }
+
     public function login(Request $request)
     {
 
@@ -105,6 +135,7 @@ class UserController extends Controller
         }
 
     }
+
     public
     function updateFcmKey(Request $request)
     {

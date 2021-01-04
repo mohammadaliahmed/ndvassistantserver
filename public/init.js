@@ -25,5 +25,13 @@ messaging.requestPermission()
 
 messaging.onMessage(function(payload){
     console.log('onMessage',payload);
+    const notificationTitle = 'dfsdf';
+    const notificationOptions = {
+        body: 'sfBackground Message body.',
+        icon: '/firebase-logo.png'
+    };
+
+    self.registration.showNotification(notificationTitle,
+        notificationOptions);
    
 })

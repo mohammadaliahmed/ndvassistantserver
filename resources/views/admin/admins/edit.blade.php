@@ -21,9 +21,9 @@
                             <small>Edit Admin</small>
                             <h1>
                                 @if($user->avatar ==  null)
-                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle" style="max-height: 40px;">
+                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle" style="max-height: 100px;">
                                 @else
-                                    <img src="{{asset('uploads')}}/{{$user->avatar}}" alt="avatar" class="img-circle" style="max-height: 40px;">
+                                    <img src="{{asset('uploads')}}/{{$user->avatar}}" alt="avatar" class="img-circle" style="max-height: 100px;">
                                 @endif
                                 {{$user->name}}</h1>
                             <hr>

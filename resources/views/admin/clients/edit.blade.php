@@ -22,9 +22,11 @@
                             <small>Edit Client</small>
                             <h1>
                                 @if($user->avatar ==  null)
-                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle" style="max-height: 40px;">
+                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle"
+                                         style="max-height: 40px;">
                                 @else
-                                    <img src="{{asset('uploads')}}/{{$user->avatar}}" alt="avatar" class="img-circle" style="max-height: 40px;">
+                                    <img src="{{asset('uploads')}}/{{$user->avatar}}" alt="avatar" class="img-circle"
+                                         style="max-height: 100px;width: 100px;">
                                 @endif
                                 {{$user->name}}</h1>
                             <hr>
@@ -36,12 +38,29 @@
 
                             <div class="form-group">
                                 <label class="control-label">User Name*:</label>
-                                <input type="text" class="form-control" readonly name="username" value="{{$user->username}}" required/>
+                                <input type="text" class="form-control" readonly name="username"
+                                       value="{{$user->username}}" required/>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Email*:</label>
-                                <input type="email" class="form-control" name="email" value="{{$user->email}}" required/>
+                                <input type="email" class="form-control" name="email" value="{{$user->email}}"
+                                       required/>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">House #:</label>
+                                    <input type="number" class="form-control" name="housenumber"
+                                           value="{{$user->housenumber}}"
+                                           required/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Block*:</label>
+                                    <input type="text" class="form-control" name="block" value="{{$user->block}}"
+                                           required/>
+                                </div>
                             </div>
 
                             <div class="form-group">
@@ -57,7 +76,7 @@
                                 <select name="role" class="form-control">
                                     <option value="admin" @if($user->hasRole('admin'))selected @endif>Admin</option>
                                     <option value="staff" @if($user->hasRole('staff'))selected @endif>Staff</option>
-                                    <option value="client"  @if($user->hasRole('client'))selected @endif>Client</option>
+                                    <option value="client" @if($user->hasRole('client'))selected @endif>Client</option>
                                 </select>
                             </div>
 

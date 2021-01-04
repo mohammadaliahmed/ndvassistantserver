@@ -26,33 +26,35 @@ class ClientsController extends Controller
     public function index()
     {
         $users = User::Paginate(15);
-        return view('admin.clients.index',compact('users'));
+        return view('admin.clients.index', compact('users'));
     }
 
     /**
      * Create new resource.
      */
-    public function create(){
+    public function create()
+    {
         return view('admin.clients.add');
     }
 
     /**
      * Add new resource to database.
      */
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $this->validate($request, [
             'name' => 'required|max:32',
             'username' => 'required|alpha_dash|max:100|unique:users',
             'email' => 'required|email|max:100|unique:users',
             'password' => 'required|min:6',
         ]);
-        $user  = new User();
+        $user = new User();
         $user->name = $request->name;
         $user->username = $request->username;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
 
-        if(!empty($request->file)){
+        if (!empty($request->file)) {
             $request->file->move('uploads', $request->file->getClientOriginalName());
             $user->avatar = $request->file->getClientOriginalName();
         }
@@ -61,7 +63,6 @@ class ClientsController extends Controller
         $user->roles()->attach($role->id);
         return redirect::to('admin/clients')->withMessage('New client has been added');
     }
-
 
 
     /**
@@ -87,24 +88,26 @@ class ClientsController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->username = $request->username;
+        $user->housenumber = $request->housenumber;
+        $user->block = $request->block;
         $user->email = $request->email;
-        if(!empty($request->file)){
+        if (!empty($request->file)) {
             $request->file->move('uploads', $request->file->getClientOriginalName());
             $user->avatar = $request->file->getClientOriginalName();
         }
 
         $user->save();
-        if($request->role == 'admin'){
+        if ($request->role == 'admin') {
             $role = Role::where('name', 'admin')->first();
             $user->detachRoles($user->roles);
             $user->roles()->attach($role->id);
         }
-        if($request->role == 'client'){
+        if ($request->role == 'client') {
             $role = Role::where('name', 'client')->first();
             $user->detachRoles($user->roles);
             $user->roles()->attach($role->id);
         }
-        if($request->role == 'staff'){
+        if ($request->role == 'staff') {
             $role = Role::where('name', 'staff')->first();
             $user->detachRoles($user->roles);
             $user->roles()->attach($role->id);
@@ -119,9 +122,9 @@ class ClientsController extends Controller
     public function destroy($id)
     {
         $tickets = Tickets::where('user_id', $id)->get();
-        foreach ($tickets as $ticket){
-            $files = Files::where('ticket_id' , $ticket->id)->get();
-            foreach ($files as $file){
+        foreach ($tickets as $ticket) {
+            $files = Files::where('ticket_id', $ticket->id)->get();
+            foreach ($files as $file) {
                 Storage::delete($file->name);
             }
             Replies::where('ticket_id', $ticket->id)->delete();

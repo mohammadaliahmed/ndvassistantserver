@@ -23,6 +23,8 @@
                                         <tr>
                                             <th class="heading">Name</th>
                                             <th class="heading">Email</th>
+                                            <th class="heading">phone</th>
+                                            <th class="heading">Address</th>
                                             <th class="heading">Avatar</th>
                                             <th class="heading">Registered On</th>
                                             <th class="heading">Action</th>
@@ -40,6 +42,8 @@
                                                         </a>
                                                     </td>
                                                     <td>{{$user->email}}</td>
+                                                    <td>{{$user->phone}}</td>
+                                                    <td>House #:{{$user->housenumber.', '.$user->block}}</td>
                                                     <td>
                                                         @if($user->avatar ==  null)
                                                             <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle" style="height: 40px; width:40px">

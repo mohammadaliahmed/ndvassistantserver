@@ -63,7 +63,8 @@
                                         <a href="{{url('ticket')}}/{{$notification->data['ticket_id']}}/{{str_replace(' ', '-',   strtolower($notification->data['ticket_title']))}}">
                                             <strong class="badge">{{$notification->data['reply_user']}}</strong>
                                             <small>replied to a ticket</small>
-                                            <br><span class="ticket_small_title">{{$notification->data['ticket_title']}}</span>
+                                            <br><span
+                                                    class="ticket_small_title">{{$notification->data['ticket_title']}}</span>
                                         </a>
                                     </li>
                                 @endif
@@ -97,14 +98,16 @@
                             @if(Auth::user()->avatar == null)
                                 <span class="avatar"><img src="{{asset('uploads/avatar.png')}}" alt="avatar"></span>
                             @else
-                                <span class="avatar"><img src="{{asset('uploads')}}/{{Auth::user()->avatar}}" alt="avatar"></span>
+                                <span class="avatar"><img src="{{asset('uploads')}}/{{Auth::user()->avatar}}"
+                                                          alt="avatar"></span>
 
                             @endif
                             <span class="user_name">{{Auth::user()->name}}</span>
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{url('profile/settings')}}"><i class="fa fa-gear"></i> Profile Settings</a></li>
+                            <li><a href="{{url('profile/settings')}}"><i class="fa fa-gear"></i> Profile Settings</a>
+                            </li>
                             <li><a href="{{url('change/password')}}"><i class="fa fa-lock"></i> Change Password</a></li>
                             <li role="separator" class="divider"></li>
                             <li>
@@ -113,7 +116,8 @@
                                     <i class="fa fa-lock"></i> Logout
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
                             </li>
@@ -124,7 +128,7 @@
 
                 @if(Auth::guest())
                     <li><a href="{{url('login')}}">Login</a></li>
-                    <li><a href="{{url('register')}}" >Register</a></li>
+                    <li><a href="{{url('register')}}">Register</a></li>
                 @endif
                 <li><a href="{{url('new/ticket')}}" class="new_ticket">New Ticket</a></li>
             </ul>
@@ -146,13 +150,13 @@
 
     <div class="button-box dropdown">
         @if(Auth::user()->hasRole('admin'))
-            <a  class="btn btn-default" href="{{asset('/admin/tickets')}}">
+            <a class="btn btn-default" href="{{asset('/admin/tickets')}}">
                 <img src="{{asset('images/sms-icon.png')}}" alt="Icon Not available">
                 <i class="fa fa-comment-o"></i>
                 <span class="button-text">Tickets</span>
             </a>
         @else
-            <a  class="btn btn-default" href="{{asset('/tickets')}}">
+            <a class="btn btn-default" href="{{asset('/tickets')}}">
                 <img src="{{asset('images/sms-icon.png')}}" alt="Icon Not available">
                 <i class="fa fa-comment-o"></i>
                 <span class="button-text">Tickets</span>
@@ -161,7 +165,7 @@
     </div>
 
     <div class="button-box dropdown">
-        <a  class="btn btn-default admin" href="{{asset('/admin/admins')}}">
+        <a class="btn btn-default admin" href="{{asset('/admin/admins')}}">
             <img src="{{asset('images/handset.png')}}" alt="Icon Not available">
             <i class="fa fa-headphones"></i>
             <span class="button-text">Admin</span>
@@ -169,7 +173,7 @@
     </div>
 
     <div class="button-box dropdown">
-        <a  class="btn btn-default users" href="{{asset('/admin/staff')}}">
+        <a class="btn btn-default users" href="{{asset('/admin/staff')}}">
             <img src="{{asset('images/user-group.png')}}" alt="Icon Not available">
             <i class="fa fa-users"></i>
             <span class="button-text">Staff</span>
@@ -177,10 +181,10 @@
     </div>
 
     <div class="button-box dropdown">
-        <a  class="btn btn-default  setting" href="{{asset('/admin/clients')}}">
+        <a class="btn btn-default  setting" href="{{asset('/admin/clients')}}">
             <img src="{{asset('images/user-group.png')}}" alt="Icon Not available">
             <i class="fa fa-users"></i>
-            <span class="button-text">Clients</span>
+            <span class="button-text">Customers</span>
         </a>
 
     </div>
@@ -202,6 +206,22 @@
         </a>
     </div>
 
+    <div class="button-box dropdown">
+        <a href="{{url('/admin/noticeboard')}}" type="button" class="btn btn-default noticeboard">
+            <img src="{{asset('images/noticeboard.png')}}" alt="Icon Not available">
+            <i class="fa fa-gear"></i>
+            <span class="button-text">Notice Board</span>
+        </a>
+
+    </div>
+    <div class="button-box dropdown">
+        <a href="{{url('/admin/notifications')}}" type="button" class="btn btn-default notifications">
+            <img src="{{asset('images/noticeboard.png')}}" alt="Icon Not available">
+            <i class="fa fa-gear"></i>
+            <span class="button-text">notifications</span>
+        </a>
+
+    </div>
     <div class="button-box dropdown right-margin0">
         <a href="{{url('/admin/settings')}}" type="button" class="btn btn-default setting">
             <img src="{{asset('images/setting.png')}}" alt="Icon Not available">
@@ -225,14 +245,18 @@
                     <div class="footer-content">
                         <div class="col-md-12">
                             <div class="section-one">
-                                <img width="150" src="{{asset('uploads')}}/{{$settings->footer_logo}}" class="img-responsive" alt="Nothing">
+                                <img width="150" src="{{asset('uploads')}}/{{$settings->footer_logo}}"
+                                     class="img-responsive" alt="Nothing">
                                 <p class="media-body">{{$settings->footer_description}}
                                 </p>
                                 <div class="social-icon">
                                     <ul>
-                                        <li><a href="{{$settings->facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="{{$settings->twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="{{$settings->linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="{{$settings->facebook}}" target="_blank"><i
+                                                        class="fa fa-facebook"></i></a></li>
+                                        <li><a href="{{$settings->twitter}}" target="_blank"><i
+                                                        class="fa fa-twitter"></i></a></li>
+                                        <li><a href="{{$settings->linkedin}}" target="_blank"><i
+                                                        class="fa fa-linkedin"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

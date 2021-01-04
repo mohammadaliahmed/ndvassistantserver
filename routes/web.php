@@ -20,10 +20,13 @@ Route::group(['middleware' => ['role:admin']], function() {
     Route::get('/admin', 'AdminController@index')->name('admin');
     Route::resource('/admin/faq', 'Admin\FaqController');
     Route::resource('admin/departments', 'Admin\DepartmentsController');
+    Route::resource('admin/noticeboard', 'NoticeBoardController');
     Route::get('/admin/tickets','TicketsController@adminTickets')->name('adminTicket');
     Route::resource('admin/staff', 'Admin\StaffController');
     Route::resource('admin/admins', 'Admin\AdminController');
     Route::resource('/admin/clients', 'Admin\ClientsController');
+    Route::get('/admin/notifications', 'NotificationsController@index')->name('admin');
+    Route::post('/admin/sendnotification', 'NotificationsController@sendnotification')->name('sendnotification');
 
     /*user routes*/
     Route::get('/all/users', 'Admin\UsersController@viewUsers');

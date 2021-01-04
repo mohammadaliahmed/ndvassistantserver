@@ -426,6 +426,7 @@ class ComposerStaticInit1ba596836bc58706e7b1191fee53adfa
         'CreateDepartmentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_02_101318_create_departments_table.php',
         'CreateFaqsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_07_145638_create_faqs_table.php',
         'CreateFilesTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_07_085206_create_files_table.php',
+        'CreateNoticeBoardTable' => __DIR__ . '/../..' . '/database/migrations/2020_12_31_104535_create_notice_board_table.php',
         'CreateNotificationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_21_072709_create_notifications_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateRepliesTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_03_110029_create_replies_table.php',
