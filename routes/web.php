@@ -26,6 +26,7 @@ Route::group(['middleware' => ['role:admin']], function() {
     Route::resource('admin/admins', 'Admin\AdminController');
     Route::resource('/admin/clients', 'Admin\ClientsController');
     Route::get('/admin/notifications', 'NotificationsController@index')->name('admin');
+    Route::get('/admin/reports', 'ReportsController@index')->name('admin');
     Route::post('/admin/sendnotification', 'NotificationsController@sendnotification')->name('sendnotification');
 
     /*user routes*/

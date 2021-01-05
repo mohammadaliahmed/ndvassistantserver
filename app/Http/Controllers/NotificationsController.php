@@ -20,7 +20,7 @@ class NotificationsController extends Controller
     {
         $users = User::all();
         foreach ($users as $user) {
-            if ($user->hasRole('client')) {
+            if ($user->hasRole('client') && $user->fcmKey != null) {
                 $sendNotification = new SendNotification();
                 $sendNotification->sendPushNotification($user->fcmKey,
                     $request->title,

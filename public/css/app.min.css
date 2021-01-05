@@ -44,6 +44,7 @@ Primary use: Ticket Management
 .many-button-box .button-box .users{background-color:#ba682e;transition:.3s}.many-button-box .button-box .users:hover{background-color:#e5672d;transition:.3s}
 .many-button-box .button-box .users:focus{outline:0}.many-button-box .button-box .admin{background-color:#ef0d74;transition:.3s}
 .many-button-box .button-box .users:focus{outline:0}.many-button-box .button-box .notifications{background-color:#d61de3;transition:.3s}
+.many-button-box .button-box .users:focus{outline:0}.many-button-box .button-box .reports{background-color:#777;transition:.3s}
 .many-button-box .button-box .users:focus{outline:0}.many-button-box .button-box .noticeboard{background-color:#d7da07;transition:.3s}
 .many-button-box .button-box .admin:hover{background-color:#e5672d;transition:.3s}
 .many-button-box .button-box .admin:focus{outline:0}.many-button-box .button-box .faq{background-color:#14aee7;transition:.3s}
@@ -188,10 +189,10 @@ Primary use: Ticket Management
 .col-padding-off{padding:0}.margin-off{margin:0}.menu-active{right:0 !important}.margin-bottom{margin-bottom:22px}
 .padding-off{padding:0}.right-margin0{margin-right:0 !important}.navbar-default .navbar-toggle{background-color:transparent;border-radius:0;border:0;margin-top:9px;margin-right:6px}
 .navbar-default .navbar-toggle .icon-bar{background-color:#4F92C6}.navbar-default .navbar-toggle:focus{background-color:transparent}
-.navbar-default .navbar-toggle.collapsed{background-color:transparent}.navbar-default .navbar-toggle.collapsed .icon-bar{transition:.5s;background-color:#ffffff}
+.navbar-default .navbar-toggle.collapsed{background-color:transparent}.navbar-default .navbar-toggle.collapsed .icon-bar{transition:.5s;background-color:#4F92C6}
 .navbar-default .navbar-toggle.collapsed:hover{background-color:transparent}.navbar-default .navbar-toggle.collapsed:hover .icon-bar{transition:.5s;background-color:#4F92C6}
 .navbar-default .navbar-toggle:hover{background-color:transparent}.navbar-default .navbar-toggle:hover .icon-bar{transition:.5s;background-color:#4F92C6}
-#menu-btn .fa{color:#ffffff;cursor:pointer;padding:16px 10px 0;font-size:20px;transition:.5s}
+#menu-btn .fa{color:#4F92C6;cursor:pointer;padding:16px 10px 0;font-size:20px;transition:.5s}
 #menu-btn .fa:hover{transition:.5s;color:#4F92C6}.table-section{background-color:#fff;border:1px solid #d9dfe9;margin-bottom:40px}
 .table-section .table-responsive{border:0}.table-section .title{text-transform:uppercase;font:700 16px "Raleway",sans-serif;color:#ffffff;margin:0;border-bottom:1px solid #d9dfe9;padding:25px 20px}
 .table-section .title span{color:#4F92C6}.table-section .table-lead thead tr .heading{border:0;font:700 14px "Raleway",sans-serif;color:#000;padding:25px 10px;text-transform:capitalize;text-align:center}

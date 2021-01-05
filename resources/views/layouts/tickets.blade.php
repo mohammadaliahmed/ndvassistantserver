@@ -214,11 +214,19 @@
         </a>
 
     </div>
-    <div class="button-box dropdown">
+    <div class="button-box dropdown ">
         <a href="{{url('/admin/notifications')}}" type="button" class="btn btn-default notifications">
-            <img src="{{asset('images/noticeboard.png')}}" alt="Icon Not available">
+            <img src="{{asset('images/notification.png')}}" alt="Icon Not available">
             <i class="fa fa-gear"></i>
             <span class="button-text">notifications</span>
+        </a>
+
+    </div>
+    <div class="button-box dropdown ">
+        <a href="{{url('/admin/reports')}}" type="button" class="btn btn-default reports">
+            <img src="{{asset('images/statistics.png')}}" alt="Icon Not available">
+            <i class="fa fa-gear"></i>
+            <span class="button-text">Reports</span>
         </a>
 
     </div>
