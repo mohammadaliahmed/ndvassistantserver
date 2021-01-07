@@ -12,7 +12,7 @@ return array(
     'CreateDepartmentsTable' => $baseDir . '/database/migrations/2017_06_02_101318_create_departments_table.php',
     'CreateFaqsTable' => $baseDir . '/database/migrations/2017_06_07_145638_create_faqs_table.php',
     'CreateFilesTable' => $baseDir . '/database/migrations/2017_03_07_085206_create_files_table.php',
-    'CreateNoticeBoardTable' => $baseDir . '/database/migrations/2020_12_31_104535_create_notice_board_table.php',
+    'CreateNoticeBoardsTable' => $baseDir . '/database/migrations/2021_01_01_050242_create_notice_boards_table.php',
     'CreateNotificationsTable' => $baseDir . '/database/migrations/2017_06_21_072709_create_notifications_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateRepliesTable' => $baseDir . '/database/migrations/2017_03_03_110029_create_replies_table.php',

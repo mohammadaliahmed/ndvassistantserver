@@ -1,16 +1,25 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '289be089b8a852ec1c5353ddc6c57321afae32f4',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'balping/json-raw-encoder' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e2b0ab888342b0716f1f0628e2fa13b345c5f276',
+    ),
     'brotzka/laravel-dotenv-editor' => 
     array (
       'pretty_version' => 'v2.1.0',
@@ -19,6 +28,15 @@
       array (
       ),
       'reference' => '516679ec50e8c3e395ad521f36b1770ab210ee96',
+    ),
+    'consoletvs/charts' => 
+    array (
+      'pretty_version' => '6.5.2',
+      'version' => '6.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '35cff1c5d9f8e6a68a77ccac1c07424a5770a974',
     ),
     'cordoval/hamcrest-php' => 
     array (
@@ -374,12 +392,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '289be089b8a852ec1c5353ddc6c57321afae32f4',
     ),
     'laravel/tinker' => 
     array (
@@ -675,8 +693,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 

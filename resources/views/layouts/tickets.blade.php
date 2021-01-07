@@ -163,6 +163,14 @@
             </a>
         @endif
     </div>
+    <div class="button-box dropdown ">
+        <a href="{{url('/admin/reports')}}" type="button" class="btn btn-default reports">
+            <img src="{{asset('images/statistics.png')}}" alt="Icon Not available">
+            <i class="fa fa-gear"></i>
+            <span class="button-text">Reports</span>
+        </a>
+
+    </div>
 
     <div class="button-box dropdown">
         <a class="btn btn-default admin" href="{{asset('/admin/admins')}}">
@@ -222,14 +230,7 @@
         </a>
 
     </div>
-    <div class="button-box dropdown ">
-        <a href="{{url('/admin/reports')}}" type="button" class="btn btn-default reports">
-            <img src="{{asset('images/statistics.png')}}" alt="Icon Not available">
-            <i class="fa fa-gear"></i>
-            <span class="button-text">Reports</span>
-        </a>
 
-    </div>
     <div class="button-box dropdown right-margin0">
         <a href="{{url('/admin/settings')}}" type="button" class="btn btn-default setting">
             <img src="{{asset('images/setting.png')}}" alt="Icon Not available">

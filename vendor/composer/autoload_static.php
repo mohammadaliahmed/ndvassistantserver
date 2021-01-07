@@ -128,11 +128,13 @@ class ComposerStaticInit1ba596836bc58706e7b1191fee53adfa
         'C' => 
         array (
             'Cron\\' => 5,
+            'ConsoleTVs\\Charts\\' => 18,
             'Collective\\Html\\' => 16,
         ),
         'B' => 
         array (
             'Brotzka\\DotenvEditor\\' => 21,
+            'Balping\\JsonRaw\\' => 16,
         ),
         'A' => 
         array (
@@ -355,6 +357,10 @@ class ComposerStaticInit1ba596836bc58706e7b1191fee53adfa
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
+        'ConsoleTVs\\Charts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/consoletvs/charts/src',
+        ),
         'Collective\\Html\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravelcollective/html/src',
@@ -362,6 +368,10 @@ class ComposerStaticInit1ba596836bc58706e7b1191fee53adfa
         'Brotzka\\DotenvEditor\\' => 
         array (
             0 => __DIR__ . '/..' . '/brotzka/laravel-dotenv-editor/src',
+        ),
+        'Balping\\JsonRaw\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/balping/json-raw-encoder/src',
         ),
         'App\\' => 
         array (
@@ -426,7 +436,7 @@ class ComposerStaticInit1ba596836bc58706e7b1191fee53adfa
         'CreateDepartmentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_02_101318_create_departments_table.php',
         'CreateFaqsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_07_145638_create_faqs_table.php',
         'CreateFilesTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_07_085206_create_files_table.php',
-        'CreateNoticeBoardTable' => __DIR__ . '/../..' . '/database/migrations/2020_12_31_104535_create_notice_board_table.php',
+        'CreateNoticeBoardsTable' => __DIR__ . '/../..' . '/database/migrations/2021_01_01_050242_create_notice_boards_table.php',
         'CreateNotificationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_21_072709_create_notifications_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateRepliesTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_03_110029_create_replies_table.php',
