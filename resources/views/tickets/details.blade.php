@@ -20,9 +20,10 @@
                             <!--ticket-detail-box-->
                             <div class="ticket_replies">
                                 <div class="ticket-detail-box">
-                                    <div class="outer-white" >
+                                    <div class="outer-white">
                                         <h4 class="ticket-number">Token#:
-                                            <span class="count">{{$ticket->token_no}} | Date: {{$ticket->created_at->format('d-m-Y')}}</span>
+                                            <span class="count">{{$ticket->token_no}}
+                                                | Date: {{$ticket->created_at->format('d-m-Y')}}</span>
                                         </h4>
                                         <h3 class="title">{{$ticket->subject}}</h3>
                                         <div class="date-time">
@@ -38,9 +39,11 @@
                                         <div class="outer-white">
                                             <h3 class="title">
                                                 @if($reply->users->avatar ==  null)
-                                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle">
+                                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar"
+                                                         class="img-circle">
                                                 @else
-                                                    <img src="{{asset('uploads')}}/{{$reply->users->avatar}}" alt="avatar" class="img-circle">
+                                                    <img src="{{asset('uploads')}}/{{$reply->users->avatar}}"
+                                                         alt="avatar" class="img-circle">
                                                 @endif
                                                 {{$reply->users->name}} |
                                                 <span class="text-muted date">Date: {{$reply->created_at->format('d-m-Y')}}</span>
@@ -49,7 +52,9 @@
                                                 </span>
                                                 @if($reply->user_id == Auth::id())
 
-                                                    <a href="javascript:;"  class="basic-button delete-btn red pull-right" data-id="{{$reply->id}}">
+                                                    <a href="javascript:;"
+                                                       class="basic-button delete-btn red pull-right"
+                                                       data-id="{{$reply->id}}">
                                                         <i class="fa fa-trash"></i>
                                                     </a>
                                                 @endif
@@ -117,8 +122,13 @@
                                         <td class="tno">{{$ticket->departments->name}}</td>
                                     </tr>
                                     <tr>
+                                        <td>Priority</td>
+                                        <td><span class="ticket-status {{$ticket->priority}}">{{$ticket->priority}}</span>
+                                    </tr>
+                                    <tr>
                                         <td>ticket status</td>
-                                        <td><span class="ticket-status {{$ticket->status}}">{{$ticket->status}}</span></td>
+                                        <td><span class="ticket-status {{$ticket->status}}">{{$ticket->status}}</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Assigned ticket</td>
@@ -129,21 +139,21 @@
                                         @endif
                                     </tr>
                                     @if(Auth::user()->hasRole('staff') || Auth::user()->hasRole('admin'))
-                                    <tr>
-                                        <td class="no-border">
+                                        <tr>
+                                            <td class="no-border">
                                             <span class="new-tk ticker">
                                                 <a href="javascript:;" data-toggle="modal" data-target="#assign-ticket">
                                                     assign ticket
                                                 </a>
 
                                             </span>
-                                        </td>
-                                        <td class="no-border">
+                                            </td>
+                                            <td class="no-border">
                                             <span class="update-tk ticker">
                                                 <a href="javascript:;" data-toggle="modal" data-target="#status-modal"> update status</a>
                                             </span>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
                                     @endif
 
                                     </tbody>
@@ -164,7 +174,8 @@
                                     @foreach($files as $file)
                                         <tr>
                                             <td>
-                                                <a href="{{url('download')}}/{{$file->name}}" class="file-up">{{$file->name}}</a>
+                                                <a href="{{url('download')}}/{{$file->name}}"
+                                                   class="file-up">{{$file->name}}</a>
                                             </td>
                                             <td>{{$file->users->name}}</td>
                                         </tr>
@@ -187,7 +198,8 @@
             <div class="modal-content">
                 {{Form::open(['url'=>['update/status', $ticket->id], 'class'=>'defaultForm','method' =>'post'])}}
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Update Ticket Status</h4>
                 </div>
                 <div class="modal-body">
@@ -216,7 +228,8 @@
             <div class="modal-content">
                 {{Form::open(['url'=>['assign/ticket', $ticket->id], 'class'=>'defaultForm','method' =>'post'])}}
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Assign Ticket</h4>
                 </div>
                 <div class="modal-body">
@@ -255,7 +268,7 @@
 
             $("#replies").on('submit', function (e) {
                 e.preventDefault();
-                if($('#replies textarea').val() == ''){
+                if ($('#replies textarea').val() == '') {
                     $('.reply-body').hide().fadeIn(800).delay(3000).fadeOut(800);
                     return false;
                 }
@@ -264,7 +277,7 @@
                     type: 'POST',
                     url: '{{url('/add-reply')}}',
                     data: new FormData($("#replies")[0]),
-                    async:false,
+                    async: false,
                     processData: false,
                     contentType: false,
                     success: function (data) {
@@ -279,38 +292,38 @@
                 })
             });
 
-            $(document).on('click',".delete-btn", function () {
+            $(document).on('click', ".delete-btn", function () {
                 var id = $(this).attr('data-id');
                 $(this).parent().closest('.outer-white').addClass('reply_to_delete');
                 swal({
-                            title: "Are you sure?",
-                            type: "warning",
-                            showCancelButton: true,
-                            confirmButtonColor: "#DD6B55",
-                            confirmButtonText: "Yes, delete it!",
-                            cancelButtonText: "No, cancel!",
-                            closeOnConfirm: false,
-                            closeOnCancel: true
-                        },
-                        function(isConfirm){
-                            if (isConfirm) {
-                                $.ajax({
-                                    type: 'POST',
-                                    url: '{{url('/delete/replies')}}'+"/"+id,
-                                    data:{
-                                        id:id,
-                                        '_token': '{{csrf_token()}}'
-                                    },
-                                    success: function (data) {
-                                        $('.reply_to_delete').hide();
-                                        swal("Deleted!", "Reply message has been deleted.", "success");
+                        title: "Are you sure?",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "Yes, delete it!",
+                        cancelButtonText: "No, cancel!",
+                        closeOnConfirm: false,
+                        closeOnCancel: true
+                    },
+                    function (isConfirm) {
+                        if (isConfirm) {
+                            $.ajax({
+                                type: 'POST',
+                                url: '{{url('/delete/replies')}}' + "/" + id,
+                                data: {
+                                    id: id,
+                                    '_token': '{{csrf_token()}}'
+                                },
+                                success: function (data) {
+                                    $('.reply_to_delete').hide();
+                                    swal("Deleted!", "Reply message has been deleted.", "success");
 
-                                    }
-                                })
-                            } else {
-                                swal("Cancelled", "Your imaginary file is safe :)", "error");
-                            }
-                        });
+                                }
+                            })
+                        } else {
+                            swal("Cancelled", "Your imaginary file is safe :)", "error");
+                        }
+                    });
             });
         });
 

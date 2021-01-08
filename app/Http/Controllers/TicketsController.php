@@ -70,6 +70,7 @@ class TicketsController extends Controller
         $ticket->token_no = rand(1000, 10000);
         $ticket->subject = $request->subject;
         $ticket->description = $request->description;
+        $ticket->priority    = $request->priority;
         $ticket->status = 'open';
         $ticket->save();
 
@@ -97,7 +98,7 @@ class TicketsController extends Controller
         if ($settings->ticket_email == 'yes') {
             $department = Departments::find($request->department_id);
             Mail::send('mails.thanks', ['ticket' => $request, 'department' => $department], function ($message) use ($settings) {
-                $message->from('no-reply@gmail.com', 'NDV Assistant');
+                $message->from('no-reply@gmail.com', 'NDVHS Sahoolat');
                 $message->subject('New Ticket Created');
                 $message->to($settings->admin_email);
             });

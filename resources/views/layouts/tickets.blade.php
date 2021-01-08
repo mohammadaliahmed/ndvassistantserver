@@ -12,7 +12,7 @@
 
     <script src="{{asset('plugin/jquery/jquery.min.js')}}"></script>
 
-    <title>NDV Assistant | @yield('title')</title>
+    <title>NDVHS Sahoolat | @yield('title')</title>
 
     <link rel="stylesheet" href="{{asset('plugin/bootstrap-3.3.7/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugin/font-awesome-4.7.0/css/font-awesome.min.css')}}">

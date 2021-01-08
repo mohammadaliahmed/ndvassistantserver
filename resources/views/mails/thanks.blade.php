@@ -5,7 +5,7 @@
 <div style="width: 100%;">
 
     <div style="float: left; background-color: #ef0f72; width: 100%; color: #fff; padding: 5px 5px 15px 5px;">
-        <h4 style="line-height: 30px;width: 100%; font-size: 17px; text-align: center; margin: 10px;">NDV Assistant</h4>
+        <h4 style="line-height: 30px;width: 100%; font-size: 17px; text-align: center; margin: 10px;">NDVHS Sahoolat</h4>
         <p style="text-align: center;">New Ticket Created</p>
         {{--<img src="https://propakistani.pk/wp-content/uploads/2020/10/AcuraSType-MAIN_i-e1602837084858.jpg"/>--}}
     </div>

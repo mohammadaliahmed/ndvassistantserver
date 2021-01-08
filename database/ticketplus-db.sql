@@ -264,7 +264,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `name`, `logo`, `footer_logo`, `description`, `footer_description`, `keywords`, `facebook`, `twitter`, `linkedin`, `copyrights`, `staff_can_edit`, `client_can_edit`, `ticket_email`, `admin_email`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'NDV Assistant', 'logo.png', 'footer-logo.png', '', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '', 'https://www.facebook.com/', 'https://www.twitter.com/', 'https://www.linkedin.com/', 'Copyrights © 2019 NDV Assistant All rights reserved', 'yes', 'yes', 'no', 'info@teamworktec.com', NULL, '2019-09-22 15:18:44', '2019-09-22 15:18:44');
+(1, 'NDVHS Sahoolat', 'logo.png', 'footer-logo.png', '', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '', 'https://www.facebook.com/', 'https://www.twitter.com/', 'https://www.linkedin.com/', 'Copyrights © 2019 NDVHS Sahoolat All rights reserved', 'yes', 'yes', 'no', 'info@teamworktec.com', NULL, '2019-09-22 15:18:44', '2019-09-22 15:18:44');
 
 -- --------------------------------------------------------
 

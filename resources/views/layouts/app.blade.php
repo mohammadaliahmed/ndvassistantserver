@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>NDV Assistant | @yield('title')</title>
+    <title>NDVHS Sahoolat | @yield('title')</title>
 
     <link rel="stylesheet" href="{{asset('plugin/bootstrap-3.3.7/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugin/font-awesome-4.7.0/css/font-awesome.min.css')}}">
@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="{{asset('plugin/datatable/jquery.dataTables.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugin/slick/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.min.css')}}">
+
+
 
     <link rel="icon" href="{{asset('images/fav.png')}}" type="image/x-icon"/>
 

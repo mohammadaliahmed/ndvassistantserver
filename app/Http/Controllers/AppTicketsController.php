@@ -179,6 +179,7 @@ class AppTicketsController extends Controller
             $ticket->token_no = rand(1000, 10000);
             $ticket->subject = $request->title;
             $ticket->description = $request->description;
+            $ticket->priority = $request->priority;
             $ticket->status = 'open';
             $ticket->save();
 
@@ -210,7 +211,7 @@ class AppTicketsController extends Controller
 
             $department = Departments::find($request->department_id);
             Mail::send('mails.appthanks', ['ticket' => $request, 'department' => $department, 'username' => $usr, 'subject' => $request->title], function ($message) use ($settings) {
-                $message->from('no-reply@gmail.com', 'NDV Assistant');
+                $message->from('no-reply@gmail.com', 'NDVHS Sahoolat');
                 $message->subject('New Ticket Created');
                 $message->to($settings->admin_email);
             });
@@ -232,7 +233,7 @@ class AppTicketsController extends Controller
         $settings = Settings::all()->first();
 
         Mail::send('mails.testmail', ['ticket' => $ticket, 'department' => $department], function ($message) use ($settings) {
-            $message->from('no-reply@gmail.com', 'NDV Assistant');
+            $message->from('no-reply@gmail.com', 'NDVHS Sahoolat');
             $message->subject('New Ticket Created');
             $message->to('m.aliahmed0@gmail.com');
         });

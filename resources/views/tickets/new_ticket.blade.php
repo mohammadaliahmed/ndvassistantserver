@@ -57,6 +57,15 @@
                                 <input type="text" class="form-control" name="subject" value="{{ old('subject')}}" required/>
                             </div>
 
+
+                            <div class="form-group">
+                                <label class="control-label">Priority*:</label>
+                                <select name="priority" class="form-control">
+                                    <option value="low" >Low</option>
+                                    <option value="medium" >Medium</option>
+                                    <option value="high" >High</option>
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label class="control-label">Description:</label>
                                 <textarea class="form-control" name="description" required>{{ old('description')}}</textarea>

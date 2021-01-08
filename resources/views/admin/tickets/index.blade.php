@@ -43,7 +43,9 @@
                                                     <span class="ticket-status {{$ticket->status}}">
                                                         {{$ticket->status}}
                                                     </span>
+
                                                 </td>
+
 
                                                 <td>{{$ticket->created_at->format('d-m-Y')}}</td>
                                                 <td>
