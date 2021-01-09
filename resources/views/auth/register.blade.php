@@ -17,10 +17,9 @@
             <div class="container">
                 <div class="col-md-6">
                     <div class="login-area">
-                        <div class="login-back"></div>
                         <div class="login-front">
                             <div>
-                                <img width="150" src="{{asset('uploads')}}/{{$settings->logo}}" alt="logo">
+                                <img width="250" src="{{asset('uploads')}}/full_logo.png" alt="logo">
                                 <p>
                                     {{$settings->footer_description}}
                                 </p>
