@@ -20,27 +20,32 @@ class SearchController extends Controller
 
         $open = Tickets::where('status', 'open')->count();
         $replied = Tickets::where('status', 'replied')->count();
+        $processing = Tickets::where('status', 'processing')->count();
+        $resolved = Tickets::where('status', 'resolved')->count();
         $closed = Tickets::where('status', 'closed')->count();
         $pending = Tickets::where('status', 'pending')->count();
 
         $departments = Departments::all();
         $tickets_depart = Tickets::all();
 
-         return view('admin.tickets.index', compact('tickets', 'search_term', 'open','replied', 'closed', 'pending', 'departments', 'tickets_depart'));
+         return view('admin.tickets.index', compact('tickets', 'search_term', 'open','replied','processing','resolved', 'closed', 'pending', 'departments', 'tickets_depart'));
     }
 
 
     public function status($status){
+
         $tickets = Tickets::where('status', $status)->paginate(15);
         $open = Tickets::where('status', 'open')->count();
         $replied = Tickets::where('status', 'replied')->count();
+        $resolved = Tickets::where('status', 'resolved')->count();
+        $processing = Tickets::where('status', 'processing')->count();
         $closed = Tickets::where('status', 'closed')->count();
         $pending = Tickets::where('status', 'pending')->count();
 
         $departments = Departments::all();
         $tickets_depart = Tickets::all();
 
-        return view('admin.tickets.index', compact('tickets', 'open','replied', 'closed', 'pending', 'departments', 'tickets_depart'));
+        return view('admin.tickets.index', compact('tickets', 'open','replied', 'closed', 'pending','resolved', 'processing', 'departments', 'tickets_depart'));
 
     }
 
@@ -51,13 +56,15 @@ class SearchController extends Controller
 
         $open = Tickets::where('status', 'open')->count();
         $replied = Tickets::where('status', 'replied')->count();
+        $resolved= Tickets::where('status', 'resolved')->count();
+        $processing = Tickets::where('status', 'processing')->count();
         $closed = Tickets::where('status', 'closed')->count();
         $pending = Tickets::where('status', 'pending')->count();
 
         $departments = Departments::all();
         $tickets_depart = Tickets::all();
 
-        return view('admin.tickets.index', compact('tickets', 'open','replied', 'closed', 'pending', 'departments', 'tickets_depart'));
+        return view('admin.tickets.index', compact('tickets', 'open','replied', 'closed', 'pending', 'processing', 'resolved', 'departments', 'tickets_depart'));
 
     }
 

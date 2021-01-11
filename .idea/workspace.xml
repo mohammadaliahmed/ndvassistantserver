@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ddcf3b20-6487-4831-afa5-70eb5e874da7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SearchController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SearchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FindController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FindController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_03_02_065630_create_tickets_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_03_02_065630_create_tickets_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.min.css" afterPath="$PROJECT_DIR$/public/css/app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/custom.css" afterPath="$PROJECT_DIR$/public/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/custom.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/custom.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/tickets/details.blade.php" afterPath="$PROJECT_DIR$/resources/views/tickets/details.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/tickets/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/tickets/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,24 +27,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ndv assis</find>
-      <find>ndv assista</find>
-      <find>ndv assistant</find>
-      <find>Assistant</find>
-      <find>N Assistant</find>
-      <find>ND Assistant</find>
-      <find>NDV Assistant</find>
-      <find>store</find>
-      <find>submitte</find>
-      <find>depar</find>
-      <find>.ticket-status.open</find>
-      <find>ticket-status.o</find>
-      <find>HS Sahoolat</find>
-      <find>s</find>
-      <find>se</find>
       <find>sea</find>
       <find>sear</find>
-      <find>search</find>
       <find>search</find>
       <find>search ti</find>
       <find>search ticket</find>
@@ -50,6 +41,22 @@
       <find>header</find>
       <find>\&lt;div class\=\&quot;login\-front\&quot;\&gt;\n</find>
       <find>.login .login-area .login-front</find>
+      <find>r</find>
+      <find>redirec</find>
+      <find>re</find>
+      <find>rep</find>
+      <find>replied</find>
+      <find>update ticket</find>
+      <find>update</find>
+      <find>updateStatus</find>
+      <find>admin/tickets</find>
+      <find>admintic</find>
+      <find>/search/status</find>
+      <find>SearchController</find>
+      <find>status</find>
+      <find>number-box</find>
+      <find>.category-one .catege-one ul li a</find>
+      <find>transition: .3s</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -69,7 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_12_28_101248_add_morefields_to_users_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingsController.php" />
         <option value="$PROJECT_DIR$/public/init.js" />
@@ -107,19 +113,20 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/tickets/new_ticket.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/tickets/details.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/tickets/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_01_08_043015_add_priority_to_tickets_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2017_03_02_065630_create_tickets_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AppTicketsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/dashboard/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/app.min.css" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_03_02_065630_create_tickets_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/tickets/details.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TicketsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SearchController.php" />
+        <option value="$PROJECT_DIR$/public/css/app.min.css" />
       </list>
     </option>
   </component>
@@ -156,8 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,7 +211,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="tickets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -228,11 +233,29 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticket" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,12 +307,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../yoolahserver" />
-    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/app.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/register.blade.php&#10;login&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/login.blade.php&#10;tick&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;app.bl&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;in&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/dashboard/index.blade.php&#10;appc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;homecon&#9;null&#9;null&#10;ticketco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/web.php&#10;tickets&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/tickets.blade.php&#10;detai&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;ticket&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;app.p&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/app.php&#10;ticketc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/tickets/index.blade.php&#10;database.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/database.php&#10;re&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;appb&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;repo&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;repor&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/ReportsController.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/ticket/vendor/league/flysystem/src/Config.php&#10;appser&#9;null&#9;null&#10;reports&#9;null&#9;null&#10;sendn&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/SendNotification.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/User.php&#10;userco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;api&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/api.php&#10;filup&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/FileUploadController.php&#10;usercon&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/noticeboard/add.blade.php&#10;noti&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/NoticeBoardController.php&#10;role&#9;null&#9;null&#10;auth.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/auth.php&#10;repl&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Notifications/TicketReply.php&#10;notice&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/NoticeBoardController.php&#10;clientco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/Admin/ClientsController.php&#10;clientsco&#9;null&#9;null&#10;ticket.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/tickets.blade.php&#10;appti&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;env&#9;FILE&#9;file://C:/xampp/htdocs/ticket/.env&#10;creatick&#9;null&#9;null&#10;usec&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;reply&#9;null&#9;null&#10;se&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/SendNotification.php&#10;details&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;file&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/FileUploadController.php&#10;detail&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;apptic&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;than&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/mails/thanks.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file://C:/xampp/htdocs/ticket/public/css/app.min.css&#10;SearchController&#9;null&#9;null&#10;ticketc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/web.php&#10;TICKETCO&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;ticket&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/register.blade.php&#10;login&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/login.blade.php&#10;tick&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;app.bl&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;in&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/dashboard/index.blade.php&#10;appc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;homecon&#9;null&#9;null&#10;ticketco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;tickets&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/tickets.blade.php&#10;detai&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;app.p&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/app.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/tickets/index.blade.php&#10;database.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/database.php&#10;re&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;appb&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;repo&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;repor&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/ReportsController.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/ticket/vendor/league/flysystem/src/Config.php&#10;appser&#9;null&#9;null&#10;reports&#9;null&#9;null&#10;sendn&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/SendNotification.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/User.php&#10;userco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;api&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/api.php&#10;filup&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/FileUploadController.php&#10;usercon&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/noticeboard/add.blade.php&#10;noti&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/NoticeBoardController.php&#10;role&#9;null&#9;null&#10;auth.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/auth.php&#10;repl&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Notifications/TicketReply.php&#10;notice&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/NoticeBoardController.php&#10;clientco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/Admin/ClientsController.php&#10;clientsco&#9;null&#9;null&#10;ticket.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/tickets.blade.php&#10;appti&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;env&#9;FILE&#9;file://C:/xampp/htdocs/ticket/.env&#10;creatick&#9;null&#9;null&#10;usec&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;reply&#9;null&#9;null&#10;se&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/SendNotification.php&#10;details&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;file&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/FileUploadController.php&#10;detail&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -408,17 +433,19 @@
       <workItem from="1609217518514" duration="57589000" />
       <workItem from="1609996352156" duration="576000" />
       <workItem from="1609999774314" duration="1453000" />
-      <workItem from="1610080123549" duration="8572000" />
+      <workItem from="1610080123549" duration="8680000" />
+      <workItem from="1610211636930" duration="3565000" />
+      <workItem from="1610348203405" duration="4338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87863000" />
+    <option name="totallyTimeSpent" value="95874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24200426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24733475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -469,29 +496,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileUploadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/admins/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="25" column="139" lean-forward="false" selection-start-line="25" selection-start-column="139" selection-end-line="25" selection-end-column="139" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/clients/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -510,7 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="99" column="41" lean-forward="true" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="45" column="55" lean-forward="false" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-          <folding>
-            <element signature="e#40#74#0#PHP" expanded="true" />
-            <marker date="1609840882044" expanded="true" signature="800:945" ph="SELECT count... tickets" />
-            <marker date="1609840882044" expanded="true" signature="834:897" ph="select name departments" />
-            <marker date="1609840882044" expanded="true" signature="1164:1284" ph="SELECT (sele... tickets" />
-            <marker date="1609840882044" expanded="true" signature="1172:1235" ph="select name departments" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,7 +632,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -648,7 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="28" column="50" lean-forward="false" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,7 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,15 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="108" column="56" lean-forward="false" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tickets/details.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="125" column="113" lean-forward="false" selection-start-line="125" selection-start-column="113" selection-end-line="125" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,19 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3330">
           <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <marker date="1610001463404" expanded="true" signature="1203:1270" ph="..." />
-            <marker date="1610001463404" expanded="true" signature="1216:1268" ph="..." />
-            <marker date="1610001463404" expanded="true" signature="1217:1267" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,30 +744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_08_043015_add_priority_to_tickets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_02_065630_create_tickets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_08_043015_add_priority_to_tickets_table.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AppTicketsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -820,7 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="34" column="58" lean-forward="false" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,14 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
           <caret line="50" column="113" lean-forward="false" selection-start-line="50" selection-start-column="113" selection-end-line="50" selection-end-column="113" />
-          <folding>
-            <element signature="e#741#747#0#HTML" expanded="true" />
-            <element signature="e#747#753#0#HTML" expanded="true" />
-            <element signature="e#1482#1488#0#HTML" expanded="true" />
-            <element signature="e#1488#1494#0#HTML" expanded="true" />
-            <element signature="e#2227#2233#0#HTML" expanded="true" />
-            <element signature="e#2233#2239#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,10 +790,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+        <state relative-caret-position="2006">
+          <caret line="118" column="36" lean-forward="false" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
           <folding>
             <marker date="1610105501712" expanded="true" signature="1208:1275" ph="..." />
             <marker date="1610105501712" expanded="true" signature="1221:1273" ph="..." />
@@ -867,42 +809,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/profile/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="1326">
+          <caret line="78" column="11" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.min.css">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_02_065630_create_tickets_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="939" column="0" lean-forward="false" selection-start-line="939" selection-start-column="0" selection-end-line="939" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tickets/details.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="121" column="90" lean-forward="false" selection-start-line="121" selection-start-column="90" selection-end-line="121" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TicketsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+        <state relative-caret-position="494">
+          <caret line="213" column="126" lean-forward="false" selection-start-line="213" selection-start-column="126" selection-end-line="213" selection-end-column="126" />
           <folding>
-            <marker date="1610086550143" expanded="true" signature="10973:12383" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="11052:12352" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="11103:11790" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="11399:11516" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="11650:11750" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="11842:11939" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="11993:12317" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="12139:12280" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="12511:13540" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="12589:13509" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="12640:13326" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="12937:13054" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="13188:13288" ph="..." />
-            <marker date="1610086550143" expanded="true" signature="13378:13474" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="11498:12908" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="11577:12877" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="11628:12315" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="11924:12041" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="12175:12275" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="12367:12464" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="12518:12842" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="12664:12805" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="13036:14065" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="13114:14034" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="13165:13851" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="13462:13579" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="13713:13813" ph="..." />
+            <marker date="1610357702064" expanded="true" signature="13903:13999" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="929" column="13" lean-forward="false" selection-start-line="929" selection-start-column="13" selection-end-line="929" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="97" column="58" lean-forward="false" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="38" column="71" lean-forward="false" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="47" column="123" lean-forward="false" selection-start-line="47" selection-start-column="123" selection-end-line="47" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="743" column="27" lean-forward="false" selection-start-line="743" selection-start-column="27" selection-end-line="743" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

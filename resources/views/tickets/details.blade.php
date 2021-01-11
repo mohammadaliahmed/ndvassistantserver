@@ -118,12 +118,17 @@
                                         <td><span>{{$ticket->submittedBy->name}}</span></td>
                                     </tr>
                                     <tr>
+                                        <td class="tno">Address:</td>
+                                        <td><span>H#{{$ticket->submittedBy->housenumber}}, {{$ticket->submittedBy->block}}</span></td>
+                                    </tr>
+                                    <tr>
                                         <td>Department</td>
                                         <td class="tno">{{$ticket->departments->name}}</td>
                                     </tr>
                                     <tr>
                                         <td>Priority</td>
-                                        <td><span class="ticket-status {{$ticket->priority}}">{{$ticket->priority}}</span>
+                                        <td>
+                                            <span class="ticket-status {{$ticket->priority}}">{{$ticket->priority}}</span>
                                     </tr>
                                     <tr>
                                         <td>ticket status</td>
@@ -208,7 +213,10 @@
                         <select name="status" class="form-control">
 
                             <option value="open" {{($ticket->status) == 'open'? 'selected': ''}}>Open</option>
-                            <option value="replied" {{($ticket->status) == 'replied'? 'selected': ''}}>Replied</option>
+                            <option value="processing" {{($ticket->status) == 'replied'? 'selected': ''}}>Processing
+                            </option>
+                            <option value="resolved" {{($ticket->status) == 'replied'? 'selected': ''}}>Resolved
+                            </option>
                             <option value="closed" {{($ticket->status) == 'closed'? 'selected': ''}}>Closed</option>
                             <option value="pending" {{($ticket->status) == 'closed'? 'pending': ''}}>Pending</option>
 

@@ -736,13 +736,13 @@ body {
 }
 
 .category-one .catege-one ul li a:hover {
-    color: #ffffff;
+    color: #0f0f0f;
     transition: .3s
 }
 
 .category-one .catege-one ul li a:hover .number-box {
-    background-color: #ffffff;
-    border-color: #ffffff;
+    background-color: #0f0f0f;
+    border-color: #0f0f0f;
     transition: .3s
 }
 
@@ -801,8 +801,8 @@ body {
 }
 
 .category-one .second-catege .catege-two ul li:hover .number-box {
-    background-color: #ffffff;
-    border-color: #ffffff
+    background-color: #0f0f0f;
+    border-color: #0f0f0f
 }
 
 .category-one .second-catege .catege-two ul li:last-child {
@@ -918,8 +918,8 @@ body {
 }
 
 .category-two .catege-two ul li:hover .number-box {
-    background-color: #ffffff;
-    border-color: #ffffff
+    background-color: #0f0f0f;
+    border-color: #0f0f0f
 }
 
 .category-two .catege-two ul li:last-child {
@@ -2682,6 +2682,10 @@ body {
     background-color: #460275
 }
 
+.ticket-status.processing {
+    background-color: #460275
+}
+
 #editor1 {
     min-height: 120px;
     width: 100%
@@ -2933,6 +2937,14 @@ textarea.form-control {
 }
 
 .category-one .catege-one ul li a.replied {
+    color: #460275
+}
+
+.category-one .catege-one ul li a.resolved {
+    color: #460275
+}
+
+.category-one .catege-one ul li a.processing {
     color: #460275
 }
 

@@ -21,7 +21,7 @@ class CreateTicketsTable extends Migration
             $table->string('subject', 300)->nullable();
             $table->string('description', 10000)->nullable();
             $table->enum('priority', ['low', 'medium', 'high'])->default('low');
-            $table->enum('status', ['open', 'replied', 'closed', 'pending'])->nullable();
+            $table->enum('status', ['open', 'resolved','processing', 'closed', 'pending'])->nullable();
             $table->integer('assigned_to')->nullable();
             $table->rememberToken()->nullable();
             $table->timestamps();

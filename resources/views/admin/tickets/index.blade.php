@@ -113,9 +113,15 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{url('search/status/replied')}}" class="replied">
-                                                Replied Tickets
-                                                <span class="number-box">{{$replied}}</span>
+                                            <a href="{{url('search/status/resolved')}}" class="resolved">
+                                                Resolved Tickets
+                                                <span class="number-box">{{$resolved}}</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url('search/status/processing')}}" class="processing">
+                                                Processing Tickets
+                                                <span class="number-box">{{$processing}}</span>
                                             </a>
                                         </li>
 
