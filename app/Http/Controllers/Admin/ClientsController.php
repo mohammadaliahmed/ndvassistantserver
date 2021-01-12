@@ -66,6 +66,17 @@ class ClientsController extends Controller
     }
 
 
+    public function changeuserstatus(Request $request)
+    {
+        $user = User::find($request->userId);
+
+        $user->active = $request->active;
+        $user->update();
+
+        return redirect::to('admin/clients')->withMessage('New client has been added');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      */
@@ -73,9 +84,9 @@ class ClientsController extends Controller
     {
         $user = User::find($id);
 //        $tickets=DB::table('tickets')->where('user_id',$id)->get();
-        $tickets = Tickets::where('user_id',$id)->orderBy('id','desc')->paginate(15);
+        $tickets = Tickets::where('user_id', $id)->orderBy('id', 'desc')->paginate(15);
 
-        return view('admin.clients.edit', compact('user','tickets'));
+        return view('admin.clients.edit', compact('user', 'tickets'));
     }
 
     /**

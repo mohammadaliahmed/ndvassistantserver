@@ -23,8 +23,10 @@ Route::group(['middleware' => ['role:admin']], function() {
     Route::resource('admin/noticeboard', 'NoticeBoardController');
     Route::get('/admin/tickets','TicketsController@adminTickets')->name('adminTicket');
     Route::resource('admin/staff', 'Admin\StaffController');
+
     Route::resource('admin/admins', 'Admin\AdminController');
     Route::resource('/admin/clients', 'Admin\ClientsController');
+
     Route::get('/admin/notifications', 'NotificationsController@index')->name('admin');
     Route::get('/admin/reports', 'ReportsController@index')->name('admin');
     Route::post('/admin/sendnotification', 'NotificationsController@sendnotification')->name('sendnotification');
@@ -43,8 +45,10 @@ Route::group(['middleware' => ['role:admin']], function() {
     Route::get('/admin/settings', 'Admin\SettingsController@index');
     Route::post('/admin/settings', 'Admin\SettingsController@update');
     Route::post('/adminFcmKey', 'Admin\SettingsController@adminFcmKey');
+    Route::post('/changeuserstatus', 'Admin\ClientsController@changeuserstatus');
 
 });
+
 
 /*pages*/
 Route::get('/about', 'PagesController@about');
@@ -69,6 +73,7 @@ Route::group(['middleware' => ['role:staff|client']], function() {
     Route::get('/find/status/{status}','FindController@status');
     Route::get('/find/department/{id}','FindController@department');
 });
+
 
 /*User account settings*/
 Route::get('profile/settings','ProfileController@profile');

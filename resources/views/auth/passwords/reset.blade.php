@@ -17,13 +17,13 @@
             <div class="container">
                 <div class="col-md-6">
                     <div class="login-area">
-                        <div class="login-back"></div>
                         <div class="login-front">
-                            <img src="{{asset('images/ravitlash-logo.png')}}"  alt="nothing">
-                            <p>Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s
-                            </p>
+                            <div>
+                                <img width="250" src="{{asset('uploads')}}/full_logo.png"  alt="logo">
+                                <p>
+                                    {{$settings['footer_description']}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

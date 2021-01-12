@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Constants;
+use App\PasswordResets;
 use App\User;
 use App\Role;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -130,6 +133,56 @@ class UserController extends Controller
             } else {
                 return response()->json([
                     'code' => 302, 'message' => 'Wrong credentials',
+                ], Response::HTTP_OK);
+            }
+        }
+
+    }
+
+
+
+
+    public function resetpassword(Request $request)
+    {
+
+        if ($request->api_username != Constants::$API_USERNAME || $request->api_password != Constants::$API_PASSOWRD) {
+            return response()->json([
+                'code' => Response::HTTP_FORBIDDEN, 'message' => "Wrong api credentials"
+            ], Response::HTTP_OK);
+        } else {
+
+            $user = User::where('email', $request->phone)->first();
+            if ($user == null) {
+                return response()->json([
+                    'code' => 302, 'message' => 'This email does not exists',
+                ], Response::HTTP_OK);
+            } else {
+
+//                $token=Constants::generateRandomString(50);
+//                $passwordRest=PasswordResets::where('email',$request->email)->first();
+//                if($passwordRest==null){
+//                    $passwordRest = new PasswordResets();
+//                    $passwordRest->email = $request->email;
+//                    $passwordRest->token = $token;
+//                    $passwordRest->save();
+//                }else{
+//                    DB::table('password_resets')
+//                        ->where('email', $request->email)
+//                        ->update(['token' => $token]);
+//
+//                }
+
+
+//                $link='http://sahoolat.ndvhs.com/resetpassword/'.$token;
+
+//                Mail::send('mails.apppasswordreset', ['link'=>$link], function ($message) use ($request) {
+//                    $message->from('support@ndvhs.com', 'NDVHS Sahoolat');
+//                    $message->subject('Password reset');
+//                    $message->to($request->email);
+//                });
+
+                return response()->json([
+                    'code' => 302, 'message' => 'false', 'user' => $user
                 ], Response::HTTP_OK);
             }
         }

@@ -20,9 +20,11 @@
                             <small>Edit Staff</small>
                             <h1>
                                 @if($user->avatar ==  null)
-                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle" style="height: 40px; width:40px">
-                                    @else
-                                    <img src="{{asset('uploads')}}/{{$user->avatar}}" alt="avatar" class="img-circle" style="height: 40px; width:40px">
+                                    <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle"
+                                         style="height: 40px; width:40px">
+                                @else
+                                    <img src="{{asset('uploads')}}/{{$user->avatar}}" alt="avatar" class="img-circle"
+                                         style="height: 40px; width:40px">
                                 @endif
                                 {{$user->name}}</h1>
                             <hr>
@@ -34,12 +36,14 @@
 
                             <div class="form-group">
                                 <label class="control-label">User Name*:</label>
-                                <input type="text" class="form-control" readonly name="username" value="{{$user->username}}" required/>
+                                <input type="text" class="form-control" readonly name="username"
+                                       value="{{$user->username}}" required/>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Email*:</label>
-                                <input type="email" class="form-control" name="email" value="{{$user->email}}" required/>
+                                <input type="email" class="form-control" name="email" value="{{$user->email}}"
+                                       required/>
                             </div>
 
                             <div class="form-group">
@@ -50,28 +54,29 @@
                                 </div>
                             </div>
 
-                                <div class="form-group">
-                                    <label class="control-label">Department:</label>
-                                    <select name="department" class="form-control">
-                                        <option value selected>Please select</option>
-                                        @foreach($departments as $department)
-                                            <option value="{{$department->id}}" {{($user->department_id) == $department->id ? 'selected' : ''}}>{{$department->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                <label class="control-label">Department:</label>
+                                <select name="department" class="form-control">
+                                    <option value selected>Please select</option>
+                                    @foreach($departments as $department)
+                                        <option value="{{$department->id}}" {{($user->department_id) == $department->id ? 'selected' : ''}}>{{$department->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
-                                <div class="form-group">
-                                    <label class="control-label">Designation*:</label>
-                                    <input type="text" class="form-control" name="designation" value="{{$user->designation}}" required/>
-                                </div>
+                            <div class="form-group">
+                                <label class="control-label">Designation*:</label>
+                                <input type="text" class="form-control" name="designation"
+                                       value="{{$user->designation}}" required/>
+                            </div>
 
 
-                                <div class="form-group">
+                            <div class="form-group">
                                 <label class="control-label">Role*:</label>
                                 <select name="role" class="form-control">
                                     <option value="admin" @if($user->hasRole('admin'))selected @endif>Admin</option>
                                     <option value="staff" @if($user->hasRole('staff'))selected @endif>Staff</option>
-                                    <option value="client"  @if($user->hasRole('client'))selected @endif>Client</option>
+                                    <option value="client" @if($user->hasRole('client'))selected @endif>Client</option>
                                 </select>
                             </div>
 
@@ -152,6 +157,7 @@
 
 
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,4 +173,4 @@
 
 
 
-    @stop
+@stop
