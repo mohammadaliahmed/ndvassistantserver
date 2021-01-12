@@ -18,7 +18,7 @@ class AddActiveStateToUsers extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
 
-            $table->string('active')->default('active');
+            $table->string('active')->default('true');
         });
     }
 
