@@ -100,7 +100,7 @@ class TicketsController extends Controller
         if ($settings->ticket_email == 'yes') {
             $department = Departments::find($request->department_id);
             Mail::send('mails.thanks', ['ticket' => $request, 'department' => $department], function ($message) use ($settings) {
-                $message->from('support@ndvhs.com', 'NDVHS Sahoolat');
+                $message->from('no-reply@gmail.com', 'NDVHS Sahoolat');
                 $message->subject('New Ticket Created');
                 $message->to($settings->admin_email);
             });
@@ -211,7 +211,7 @@ class TicketsController extends Controller
         $pending = Tickets::where('status', 'pending')->count();
         $departments = Departments::all();
         $tickets_depart = Tickets::all();
-        return view('admin.tickets.index', compact('tickets', 'open', 'replied', 'closed', 'pending',  'processing', 'resolved', 'departments', 'tickets_depart'));
+        return view('admin.tickets.index', compact('tickets', 'open', 'replied', 'closed', 'pending', 'departments', 'tickets_depart'));
     }
 
 

@@ -13,6 +13,7 @@ use App\User;
 use App\Tickets;
 use App\Files;
 use App\Replies;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
@@ -71,7 +72,10 @@ class ClientsController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('admin.clients.edit', compact('user'));
+//        $tickets=DB::table('tickets')->where('user_id',$id)->get();
+        $tickets = Tickets::where('user_id',$id)->orderBy('id','desc')->paginate(15);
+
+        return view('admin.clients.edit', compact('user','tickets'));
     }
 
     /**

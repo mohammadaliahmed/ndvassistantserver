@@ -2671,7 +2671,7 @@ body {
 }
 
 .ticket-status.pending {
-    background-color: #ffffff
+    background-color: #ef0f72
 }
 
 .ticket-status.closed {

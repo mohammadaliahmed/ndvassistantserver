@@ -21,12 +21,11 @@
                                         </h3>
                                         <thead>
                                         <tr>
+                                            <th class="heading">Avatar</th>
                                             <th class="heading">Name</th>
                                             <th class="heading">Email</th>
                                             <th class="heading">phone</th>
                                             <th class="heading">Address</th>
-                                            <th class="heading">Avatar</th>
-                                            <th class="heading">Registered On</th>
                                             <th class="heading">Action</th>
 
                                         </tr>
@@ -37,6 +36,17 @@
                                             @if($user->hasRole('client'))
                                                 <tr id="{{$user->id}}">
                                                     <td>
+                                                        @if($user->avatar ==  null)
+                                                            <img src="{{asset('uploads')}}/avatar.png" alt="avatar"
+                                                                 class="img-circle" style="height: 40px; width:40px">
+                                                        @else
+                                                            <img src="{{asset('uploads')}}/{{$user->avatar}}"
+                                                                 alt="avatar" class="img-circle"
+                                                                 style="height: 40px; width:40px">
+
+                                                        @endif
+                                                    </td>
+                                                    <td>
                                                         <a href="{{url('admin/clients')}}/{{$user->id}}/edit">
                                                             {{$user->name}}
                                                         </a>
@@ -44,17 +54,11 @@
                                                     <td>{{$user->email}}</td>
                                                     <td>{{$user->phone}}</td>
                                                     <td>House #:{{$user->housenumber.', '.$user->block}}</td>
-                                                    <td>
-                                                        @if($user->avatar ==  null)
-                                                            <img src="{{asset('uploads')}}/avatar.png" alt="avatar" class="img-circle" style="height: 40px; width:40px">
-                                                        @else
-                                                            <img src="{{asset('uploads')}}/{{$user->avatar}}" alt="avatar" class="img-circle" style="height: 40px; width:40px">
 
-                                                        @endif
-                                                    </td>
-                                                    <td>{{$user->created_at}}</td>
+
                                                     <td>
-                                                        <a href="{{url('admin/clients')}}/{{$user->id}}/edit" class="eye">
+                                                        <a href="{{url('admin/clients')}}/{{$user->id}}/edit"
+                                                           class="eye">
                                                             <i class="fa fa-pencil"></i></a>
                                                         <a href="#" class="eye delete-btn" data-id="{{$user->id}}">
                                                             <i class="fa fa-trash"></i>
@@ -100,17 +104,17 @@
                         closeOnConfirm: false,
                         closeOnCancel: true
                     },
-                    function(isConfirm){
+                    function (isConfirm) {
                         if (isConfirm) {
                             $.ajax({
                                 type: 'DELETE',
-                                url: '{{url('/admin/clients')}}'+"/"+id,
-                                data:{
-                                    id:id,
+                                url: '{{url('/admin/clients')}}' + "/" + id,
+                                data: {
+                                    id: id,
                                     '_token': '{{csrf_token()}}'
                                 },
                                 success: function (data) {
-                                    $('.user-table tr#'+id+'').hide();
+                                    $('.user-table tr#' + id + '').hide();
                                     swal("Deleted!", "Clients has been deleted.", "success");
 
                                 }

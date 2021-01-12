@@ -76,7 +76,9 @@ class StaffController extends Controller
     {
         $user = User::find($id);
         $departments = Departments::all();
-        return view('admin.staff.edit', compact('user', 'departments'));
+        $tickets = Tickets::where('assigned_to',$id)->orderBy('id','desc')->paginate(15);
+
+        return view('admin.staff.edit', compact('user', 'departments','tickets'));
     }
 
     /**

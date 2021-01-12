@@ -83,6 +83,75 @@
 
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <span class="h1"> Tickets by {{$user->name}}</span>
+                            <div class="table-section">
+                                <h3 class="title clearfix">Tickets <span>List ({{count($tickets)}})</span>
+                                </h3>
+                                <div class="table-responsive">
+                                    <table class="table table-lead ticket-table">
+                                        <thead>
+                                        <tr>
+                                            <th class="heading">Token #</th>
+                                            <th class="heading">Title</th>
+                                            <th class="heading">Department</th>
+                                            <th class="heading">Submitted By</th>
+                                            <th class="heading">Status</th>
+                                            <th class="heading">Date</th>
+                                            <th class="heading">action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        @foreach($tickets as $ticket)
+                                            <tr id="{{$ticket->id}}">
+                                                <td>{{$ticket->token_no}}</td>
+                                                <td>
+                                                    <a href="{{url('ticket')}}/{{$ticket->id}}/{{str_replace(' ', '-',   strtolower($ticket->subject) )}}">{{$ticket->subject}}</a>
+                                                </td>
+                                                <td>{{$ticket->departments->name}}</td>
+                                                @if($ticket->user_id == Auth::id())
+                                                    <td>me</td>
+                                                @else
+                                                    <td>{{$ticket->submittedBy->name}}</td>
+                                                @endif
+
+                                                <td>
+                                                    <span class="ticket-status {{$ticket->status}}">
+                                                        {{$ticket->status}}
+                                                    </span>
+
+                                                </td>
+
+
+                                                <td>{{$ticket->created_at->format('d-m-Y')}}</td>
+                                                <td>
+                                                    <a href="{{url('edit/tickets')}}/{{$ticket->id}}" class="eye"
+                                                       data-id="{{$ticket->id}}">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+
+                                                    <a href="javascript:;" class="eye delete-btn"
+                                                       data-id="{{$ticket->id}}">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {{ $tickets->links() }}
+                            </div>
+
+                            <div class="pagination_links clearfix">
+                                {{--{{ $tickets->links() }}--}}
+                            </div>
+
+
+                        </div>
                 </div>
             </div>
         </div>

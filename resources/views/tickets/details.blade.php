@@ -119,7 +119,12 @@
                                     </tr>
                                     <tr>
                                         <td class="tno">Address:</td>
-                                        <td><span>H#{{$ticket->submittedBy->housenumber}}, {{$ticket->submittedBy->block}}</span></td>
+                                        <td><span>H#{{$ticket->submittedBy->housenumber}}
+                                                , {{$ticket->submittedBy->block}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tno">Phone:</td>
+                                        <td><span>{{$ticket->submittedBy->phone}}</span></td>
                                     </tr>
                                     <tr>
                                         <td>Department</td>
