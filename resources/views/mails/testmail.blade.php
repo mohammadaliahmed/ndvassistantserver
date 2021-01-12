@@ -9,13 +9,12 @@
         <p style="text-align: center;">New Ticket Created</p>
     </div>
 
-    <img src="https://propakistani.pk/wp-content/uploads/2020/10/AcuraSType-MAIN_i-e1602837084858.jpg"/>
 
     <div style="width: 100%; float: left; margin-top: 20px; padding-bottom: 100px;">
         <p><strong>Submitted By:</strong> Ali</p><br>
         <p><strong>Department:</strong> Ticket Server</p><br>
         <p><strong>Subject:</strong> Test</p><br>
-        <p><strong>Description:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        <p><strong>Description:</strong> ali Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
             galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
             also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s

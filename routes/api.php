@@ -38,6 +38,7 @@ Route::group(['prefix' => 'ticket'], function () {
     Route::post('allTickets', 'AppTicketsController@allTickets');
     Route::post('homeTickets', 'AppTicketsController@homeTickets');
     Route::post('getDepartments', 'AppTicketsController@getDepartments');
+
     Route::post('createTicket', 'AppTicketsController@createTicket');
     Route::post('sendMail', 'AppTicketsController@sendMail');
     Route::post('notices', 'AppTicketsController@notices');

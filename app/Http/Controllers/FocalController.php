@@ -173,7 +173,7 @@ class FocalController extends Controller
             $name = $complaints->complainant_name;
             $description = $request->description;
             Mail::send('mails.index',['name' => $name, 'description'=> $description], function ($message) use ($complaints, $request){
-                $message->from('no-reply@gmail.com', 'Complaint Management System');
+                $message->from('support@ndvhs.com', 'Complaint Management System');
                 $message->subject($request->subject);
                 $message->to("wd@ppsc.com");
                 $message->to($complaints->email );
