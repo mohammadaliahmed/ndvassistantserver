@@ -211,7 +211,7 @@ class TicketsController extends Controller
         $pending = Tickets::where('status', 'pending')->count();
         $departments = Departments::all();
         $tickets_depart = Tickets::all();
-        return view('admin.tickets.index', compact('tickets', 'open', 'replied', 'closed', 'pending', 'departments', 'tickets_depart'));
+        return view('admin.tickets.index', compact('tickets', 'open', 'replied', 'closed', 'resolved', 'processing', 'pending', 'departments', 'tickets_depart'));
     }
 
 
