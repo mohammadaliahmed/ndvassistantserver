@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ddcf3b20-6487-4831-afa5-70eb5e874da7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2021_01_12_105621_add_active_state_to_users.php" afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_105621_add_active_state_to_users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/SendNotification.php" afterPath="$PROJECT_DIR$/app/SendNotification.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +48,8 @@
       <file leaf-file-name="2021_01_12_105621_add_active_state_to_users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_12_105621_add_active_state_to_users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+            <state relative-caret-position="374">
+              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/notifications.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FileUploadController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/admins/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/SendNotification.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/NotificationsController.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Charts/TicketsStatusChart.php" />
@@ -169,6 +168,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ClientsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/clients/edit.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_01_12_105621_add_active_state_to_users.php" />
+        <option value="$PROJECT_DIR$/app/SendNotification.php" />
       </list>
     </option>
   </component>
@@ -518,7 +518,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../yoolahserver" />
-    <property name="SearchEverywhereHistoryKey" value="edit&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/clients/edit.blade.php&#10;SettingsController&#9;null&#9;null&#10;usercon&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;clie&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/Admin/ClientsController.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/web.php&#10;detai&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/ticket/public/css/app.min.css&#10;detail&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;.en&#9;FILE&#9;file://C:/xampp/htdocs/ticket/.env&#10;appco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;constan&#9;null&#9;null&#10;api&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/api.php&#10;userco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;login&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/login.blade.php&#10;reset&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/passwords/reset.blade.php&#10;cli&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/Admin/ClientsController.php&#10;staff&#9;null&#9;null&#10;ticket&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;userc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/register.blade.php&#10;ticke&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;deta&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;appthanks&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/mails/appthanks.blade.php&#10;testmail&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/mails/testmail.blade.php&#10;apptic&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;.env&#9;FILE&#9;file://C:/xampp/htdocs/ticket/.env&#10;SearchController&#9;null&#9;null&#10;ticketc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;TICKETCO&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;tick&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;app.bl&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;in&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/dashboard/index.blade.php&#10;appc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;homecon&#9;null&#9;null&#10;ticketco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;tickets&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/tickets.blade.php&#10;app.p&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/app.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/tickets/index.blade.php&#10;database.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/database.php&#10;re&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;appb&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;repo&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;repor&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/ReportsController.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/ticket/vendor/league/flysystem/src/Config.php&#10;appser&#9;null&#9;null&#10;reports&#9;null&#9;null&#10;sendn&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/SendNotification.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/User.php&#10;filup&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/FileUploadController.php&#10;add&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/noticeboard/add.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="send&#9;null&#9;null&#10;edit&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/clients/edit.blade.php&#10;SettingsController&#9;null&#9;null&#10;usercon&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;clie&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/Admin/ClientsController.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/web.php&#10;detai&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/ticket/public/css/app.min.css&#10;detail&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;.en&#9;FILE&#9;file://C:/xampp/htdocs/ticket/.env&#10;appco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;constan&#9;null&#9;null&#10;api&#9;FILE&#9;file://C:/xampp/htdocs/ticket/routes/api.php&#10;userco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;login&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/login.blade.php&#10;reset&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/passwords/reset.blade.php&#10;cli&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/Admin/ClientsController.php&#10;staff&#9;null&#9;null&#10;ticket&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;userc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/UserController.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/auth/register.blade.php&#10;ticke&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;deta&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/tickets/details.blade.php&#10;appthanks&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/mails/appthanks.blade.php&#10;testmail&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/mails/testmail.blade.php&#10;apptic&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;.env&#9;FILE&#9;file://C:/xampp/htdocs/ticket/.env&#10;SearchController&#9;null&#9;null&#10;ticketc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;TICKETCO&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;tick&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;app.bl&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;in&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/dashboard/index.blade.php&#10;appc&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/AppTicketsController.php&#10;homecon&#9;null&#9;null&#10;ticketco&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/TicketsController.php&#10;tickets&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/tickets.blade.php&#10;app.p&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/app.php&#10;index&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/tickets/index.blade.php&#10;database.&#9;FILE&#9;file://C:/xampp/htdocs/ticket/config/database.php&#10;re&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;appb&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/layouts/app.blade.php&#10;repo&#9;FILE&#9;file://C:/xampp/htdocs/ticket/resources/views/admin/reports.blade.php&#10;repor&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/ReportsController.php&#10;config.php&#9;FILE&#9;file://C:/xampp/htdocs/ticket/vendor/league/flysystem/src/Config.php&#10;appser&#9;null&#9;null&#10;reports&#9;null&#9;null&#10;sendn&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/SendNotification.php&#10;user&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/User.php&#10;filup&#9;FILE&#9;file://C:/xampp/htdocs/ticket/app/Http/Controllers/FileUploadController.php" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
@@ -640,12 +640,12 @@
       <workItem from="1609999774314" duration="1453000" />
       <workItem from="1610080123549" duration="8680000" />
       <workItem from="1610211636930" duration="3565000" />
-      <workItem from="1610348203405" duration="24609000" />
+      <workItem from="1610348203405" duration="25242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116145000" />
+    <option name="totallyTimeSpent" value="116778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -702,13 +702,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="50" column="113" lean-forward="false" selection-start-line="50" selection-start-column="113" selection-end-line="50" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
@@ -1122,10 +1115,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/SendNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="186" lean-forward="false" selection-start-line="10" selection-start-column="186" selection-end-line="10" selection-end-column="186" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_12_105621_add_active_state_to_users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        <state relative-caret-position="374">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding />
         </state>
       </provider>
