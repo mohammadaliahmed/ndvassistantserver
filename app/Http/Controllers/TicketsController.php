@@ -18,6 +18,7 @@ use App\Tickets;
 use App\Departments;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use App\Files;
@@ -59,6 +60,32 @@ class TicketsController extends Controller
         return view('tickets.new_ticket', compact('departments'));
     }
 
+    public function smsLogin()
+    {
+        $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
+        $xml = simplexml_load_string($response);
+        $value = (string) $xml->data[0];
+
+        $user = User::find(6);
+        $ticket = Tickets::find(45);
+
+        $messageToAdmin = "New ticket has been created by " . $user->name . '. House:' . $user->housenumber ." ". $user->block . ". Token:" . $ticket->token_no. '. Date: ' . $ticket->created_at ;
+        $messageToAdmin = str_replace(" ", "%20", $messageToAdmin);
+        $messageToACustomer = "Your ticket has been submitted" . ". Token:" . $ticket->token_no. '. Date: ' . $ticket->created_at;;
+        $messageToACustomer = str_replace(" ", "%20", $messageToACustomer);
+        $phone = $user->phone;
+
+        $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=".$value."&to=92".substr($phone,1,11)."&text=".$messageToAdmin."&mask=4B%20Group%20PK";
+        $newUrl2 = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=".$value."&to=92".substr($phone,1,11)."&text=".$messageToACustomer."&mask=4B%20Group%20PK";
+
+        $urll = file_get_contents($newUrl);
+        $url2 = file_get_contents($newUrl2);
+
+
+        return $urll;//         return json_encode($urll);
+        ;
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -72,7 +99,7 @@ class TicketsController extends Controller
         $ticket->token_no = rand(1000, 10000);
         $ticket->subject = $request->subject;
         $ticket->description = $request->description;
-        $ticket->priority    = $request->priority;
+        $ticket->priority = $request->priority;
         $ticket->status = 'open';
         $ticket->save();
 

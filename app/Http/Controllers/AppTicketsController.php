@@ -207,14 +207,17 @@ class AppTicketsController extends Controller
                 }
             }
             $settings = Settings::all()->first();
-            $usr = User::find($request->id)->name;
+            $usr = User::find($request->id);
 
             $department = Departments::find($request->department_id);
-            Mail::send('mails.appthanks', ['ticket' => $request, 'department' => $department, 'username' => $usr, 'subject' => $request->title], function ($message) use ($settings) {
+            Mail::send('mails.appthanks', ['ticket' => $request, 'department' => $department, 'username' => $usr->name, 'subject' => $request->title], function ($message) use ($settings) {
                 $message->from('support@ndvhs.com', 'NDVHS Sahoolat');
                 $message->subject('New Ticket Created');
                 $message->to($settings->admin_email);
             });
+
+
+            $this->sendMessage($usr, $ticket);
 
 
             return response()->json([
@@ -225,6 +228,25 @@ class AppTicketsController extends Controller
         }
     }
 
+    public function sendMessage($user, $ticket)
+    {
+        $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
+        $xml = simplexml_load_string($response);
+        $value = (string) $xml->data[0];
+
+
+        $messageToAdmin = "New ticket has been created by " . $user->name . '. House:' . $user->housenumber ." ". $user->block . ". Token:" . $ticket->token_no. '. Date: ' . $ticket->created_at ;
+        $messageToAdmin = str_replace(" ", "%20", $messageToAdmin);
+        $messageToACustomer = "Your ticket has been submitted" . ". Token:" . $ticket->token_no. '. Date: ' . $ticket->created_at;;
+        $messageToACustomer = str_replace(" ", "%20", $messageToACustomer);
+        $phone = $user->phone;
+
+        $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=".$value."&to=92".substr($phone,1,11)."&text=".$messageToAdmin."&mask=4B%20Group%20PK";
+        $newUrl2 = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=".$value."&to=92".substr($phone,1,11)."&text=".$messageToACustomer."&mask=4B%20Group%20PK";
+
+        $urll = file_get_contents($newUrl);
+        $url2 = file_get_contents($newUrl2);
+    }
 
     public function sendMail()
     {
@@ -239,10 +261,53 @@ class AppTicketsController extends Controller
         });
     }
 
+
+    public function smsApp()
+    {
+        $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
+//        $response = str_replace('Auth_request', '', $response);
+//        $sessionId = str_replace('OK', '', $response);
+
+        $xml = simplexml_load_string($response);
+        $value = (string)$xml->data[0];
+
+
+        print_r($value);
+
+
+//        $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
+//
+//
+//        $xml = simplexml_load_string($response);
+//        $sessionId = (string)$xml->data[0];
+//
+//
+//        $user = User::find(6);
+//        $ticket = Tickets::find(45);
+////
+//        $messageToAdmin = "New ticket has been created by " . $user->name . '\nAddress: H#' . $user->housenumber .
+//            ', Block' . $user->block . "\nToken: " . $ticket->token_no . '\nDate: ' . $ticket->created_at;;
+//        $messageToAdmin = str_replace(" ", "%20", $messageToAdmin);
+//        $messageToACustomer = "Your ticket has been submitted" . ". Token " . $ticket->token_no. 'Date: ' . $ticket->created_at;;
+//        $messageToACustomer = str_replace(" ", "%20", $messageToACustomer);
+////        return $messageToACustomer;
+//        $phone = $user->phone;
+//
+//        $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=" . $value . "&to=92" . $phone . "&text=" . $messageToAdmin . "&mask=4B%20Group%20PK";
+////        return $newUrl;
+
+//        $urll = file_get_contents($newUrl);
+//
+//
+//        return $newUrl;//         return json_encode($urll);
+
+
+    }
+
     public function sendNotification()
     {
-        $noti=new SendNotification();
+        $noti = new SendNotification();
         $noti->sendPushNotification("c8e5dQqsSya9Vvvsnl8-tw:APA91bE4bUrkk0egzoEOVo-_NGr4tTJNgpDPikB0dMnLiy6GUNQodUNOl5Zcvm_guMUWGvfQRc3-iZS0f09i4lx95d4pYZwp36jrLe5Fa6ygY-jLicb15eZmArnd5vmMvMrEOOW4tSbU",
-            "Hey","message",1,"reply");
+            "Hey", "message", 1, "reply");
     }
 }

@@ -43,6 +43,7 @@ Route::group(['prefix' => 'ticket'], function () {
     Route::post('createTicket', 'AppTicketsController@createTicket');
     Route::post('sendMail', 'AppTicketsController@sendMail');
     Route::post('notices', 'AppTicketsController@notices');
+    Route::get('smsApp', 'AppTicketsController@smsApp');
     Route::post('getReplies', 'AppTicketsController@getReplies');
     Route::post('sendReply', 'AppTicketsController@sendReply');
     Route::post('sendNotification', 'AppTicketsController@sendNotification');

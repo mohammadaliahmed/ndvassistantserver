@@ -56,6 +56,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::post('/contact', 'PagesController@contactMail');
 
 Route::get('/tickets', 'TicketsController@index')->name('tickets');
+Route::get('/smsLogin', 'TicketsController@smsLogin')->name('smsLogin');
 Route::post('tickets', 'TicketsController@store');
 Route::get('/ticket/{id}/{title}','TicketsController@ticketDetail');
 Route::get('/edit/tickets/{id}', 'TicketsController@editTickets');
