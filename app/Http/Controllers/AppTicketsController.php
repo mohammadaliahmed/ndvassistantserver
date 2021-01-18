@@ -19,6 +19,29 @@ use Illuminate\Support\Facades\Mail;
 class AppTicketsController extends Controller
 {
     //
+    public function assignedTickets(Request $request)
+    {
+
+        if ($request->api_username != Constants::$API_USERNAME && $request->api_password != Constants::$API_PASSOWRD) {
+            return response()->json([
+                'code' => Response::HTTP_FORBIDDEN, 'message' => "Wrong api credentials"
+            ], Response::HTTP_FORBIDDEN);
+        } else {
+            $tickets = DB::table('tickets')->where('assigned_to', $request->id)->orderBy('id', 'desc')->get();
+            foreach ($tickets as $ticket) {
+                if ($ticket->assigned_to != null) {
+                    $ticket->staff = User::find($ticket->assigned_to);
+                    $ticket->user=User::find($ticket->user_id);
+                }
+            }
+            return response()->json([
+                'code' => Response::HTTP_OK, 'message' => "false", 'tickets' => $tickets
+                ,
+            ], Response::HTTP_OK);
+
+        }
+    }
+
     public function homeTickets(Request $request)
     {
 
@@ -232,17 +255,17 @@ class AppTicketsController extends Controller
     {
         $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
         $xml = simplexml_load_string($response);
-        $value = (string) $xml->data[0];
+        $value = (string)$xml->data[0];
 
 
-        $messageToAdmin = "New ticket has been created by " . $user->name . '. House:' . $user->housenumber ." ". $user->block . ". Token:" . $ticket->token_no. '. Date: ' . $ticket->created_at ;
+        $messageToAdmin = "New ticket has been created by " . $user->name . '. House:' . $user->housenumber . " " . $user->block . ". Token:" . $ticket->token_no . '. Date: ' . $ticket->created_at;
         $messageToAdmin = str_replace(" ", "%20", $messageToAdmin);
-        $messageToACustomer = "Your ticket has been submitted" . ". Token:" . $ticket->token_no. '. Date: ' . $ticket->created_at;;
+        $messageToACustomer = "Your ticket has been submitted" . ". Token:" . $ticket->token_no . '. Date: ' . $ticket->created_at;;
         $messageToACustomer = str_replace(" ", "%20", $messageToACustomer);
         $phone = $user->phone;
 
-        $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=".$value."&to=92".substr($phone,1,11)."&text=".$messageToAdmin."&mask=4B%20Group%20PK";
-        $newUrl2 = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=".$value."&to=92".substr($phone,1,11)."&text=".$messageToACustomer."&mask=4B%20Group%20PK";
+        $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=" . $value . "&to=92" . substr($phone, 1, 11) . "&text=" . $messageToAdmin . "&mask=4B%20Group%20PK";
+        $newUrl2 = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=" . $value . "&to=92" . substr($phone, 1, 11) . "&text=" . $messageToACustomer . "&mask=4B%20Group%20PK";
 
         $urll = file_get_contents($newUrl);
         $url2 = file_get_contents($newUrl2);

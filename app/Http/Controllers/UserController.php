@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Constants;
+use App\Departments;
+use App\Faq;
 use App\PasswordResets;
 use App\User;
 use App\Role;
@@ -12,6 +14,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+
 
 class UserController extends Controller
 {
@@ -121,11 +124,10 @@ class UserController extends Controller
             ], Response::HTTP_OK);
         } else {
 
-//            $abc=Hash::make($request->password);
-//            return $abc;
-
             if (Auth::attempt(['phone' => $request->phone, 'password' => $request->password])) {
                 $user = DB::table('users')->where('phone', $request->phone)->first();
+                $role = DB::table('role_user')->where('user_id', $user->id)->get();
+                $user->role = Role::find($role[0]->role_id)->name;
                 return response()->json([
                     'code' => 200, 'message' => "false", 'user' => $user
                     ,
@@ -138,8 +140,6 @@ class UserController extends Controller
         }
 
     }
-
-
 
 
     public function resetpassword(Request $request)
@@ -201,8 +201,28 @@ class UserController extends Controller
             $user = User::find($request->id);
             $user->fcmKey = $request->fcmKey;
             $user->update();
+            $role = DB::table('role_user')->where('user_id', $user->id)->get();
+            $user->role = Role::find($role[0]->role_id)->name;
             return response()->json([
                 'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user
+            ], Response::HTTP_OK);
+        }
+    }  public
+    function appFaqs(Request $request)
+    {
+
+        if ($request->api_username != Constants::$API_USERNAME && $request->api_password != Constants::$API_PASSOWRD) {
+            return response()->json([
+                'code' => Response::HTTP_FORBIDDEN, 'message' => "Wrong api credentials"
+            ], Response::HTTP_OK);
+        } else {
+           $faqs=Faq::all();
+           foreach($faqs as $faq){
+               $faq->department_name=Departments::find($faq->department_id);
+           }
+
+            return response()->json([
+                'code' => Response::HTTP_OK, 'message' => "false", 'faqs' => $faqs
             ], Response::HTTP_OK);
         }
     }

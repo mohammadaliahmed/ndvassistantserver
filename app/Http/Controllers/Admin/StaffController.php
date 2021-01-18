@@ -27,22 +27,24 @@ class StaffController extends Controller
     public function index()
     {
         $users = User::paginate(10);
-        return view('admin.staff.index',compact('users'));
+        return view('admin.staff.index', compact('users'));
     }
 
     /**
      * Create new resource.
      */
-    public function create(){
+    public function create()
+    {
         $departments = Departments::all();
-        return view('admin.staff.add',compact('departments'));
+        return view('admin.staff.add', compact('departments'));
     }
 
 
     /**
      * Add new resource to database.
      */
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $this->validate($request, [
             'name' => 'required|max:32',
             'username' => 'required|alpha_dash|max:100|unique:users',
@@ -50,7 +52,7 @@ class StaffController extends Controller
             'password' => 'required|min:6',
             'designation' => 'required',
         ]);
-        $user  = new User();
+        $user = new User();
         $user->name = $request->name;
         $user->username = $request->username;
         $user->email = $request->email;
@@ -58,7 +60,7 @@ class StaffController extends Controller
         $user->designation = $request->designation;
         $user->department_id = $request->department;
 
-        if(!empty($request->file)){
+        if (!empty($request->file)) {
             $request->file->move('uploads', $request->file->getClientOriginalName());
             $user->avatar = $request->file->getClientOriginalName();
         }
@@ -76,9 +78,9 @@ class StaffController extends Controller
     {
         $user = User::find($id);
         $departments = Departments::all();
-        $tickets = Tickets::where('assigned_to',$id)->orderBy('id','desc')->paginate(15);
+        $tickets = Tickets::where('assigned_to', $id)->orderBy('id', 'desc')->paginate(15);
 
-        return view('admin.staff.edit', compact('user', 'departments','tickets'));
+        return view('admin.staff.edit', compact('user', 'departments', 'tickets'));
     }
 
     /**
@@ -88,8 +90,8 @@ class StaffController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:32',
-            'username' => 'required|max:32|unique:users,username,'.$id,
-            'email' => 'email|max:40|unique:users,email,'.$id,
+            'username' => 'required|max:32|unique:users,username,' . $id,
+            'email' => 'email|max:40|unique:users,email,' . $id,
             'designation' => 'required',
         ]);
 
@@ -98,32 +100,35 @@ class StaffController extends Controller
         $user->name = $request->name;
         $user->username = $request->username;
         $user->email = $request->email;
+        $user->phone = $request->phone;
         $user->designation = $request->designation;
         $user->department_id = $request->department;
-        $user->save();
-        if(!empty($request->file)){
+        if (strlen($request->password) > 5) {
+            $user->password = bcrypt($request->password);
+        }
+
+        if (!empty($request->file)) {
             $request->file->move('uploads', $request->file->getClientOriginalName());
             $user->avatar = $request->file->getClientOriginalName();
         }
 
 
-
-        if($request->role == 'admin'){
+        if ($request->role == 'admin') {
             $role = Role::where('name', 'admin')->first();
             $user->detachRoles($user->roles);
             $user->roles()->attach($role->id);
         }
-        if($request->role == 'client'){
+        if ($request->role == 'client') {
             $role = Role::where('name', 'client')->first();
             $user->detachRoles($user->roles);
             $user->roles()->attach($role->id);
         }
-        if($request->role == 'staff'){
+        if ($request->role == 'staff') {
             $role = Role::where('name', 'staff')->first();
             $user->detachRoles($user->roles);
             $user->roles()->attach($role->id);
         }
-
+        $user->update();
 
 
         return redirect::to('admin/staff')->withMessage('Record has been updated');
@@ -135,9 +140,9 @@ class StaffController extends Controller
     public function destroy($id)
     {
         $tickets = Tickets::where('user_id', $id)->get();
-        foreach ($tickets as $ticket){
-            $files = Files::where('ticket_id' , $ticket->id)->get();
-            foreach ($files as $file){
+        foreach ($tickets as $ticket) {
+            $files = Files::where('ticket_id', $ticket->id)->get();
+            foreach ($files as $file) {
                 Storage::delete($file->name);
             }
             Replies::where('ticket_id', $ticket->id)->delete();

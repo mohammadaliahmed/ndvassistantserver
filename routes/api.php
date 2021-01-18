@@ -32,6 +32,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::post('resetpassword', 'UserController@resetpassword');
     Route::post('updateProfile', 'UserController@updateProfile');
     Route::post('sendMail', 'MailController@sendMail');
+    Route::post('appFaqs', 'UserController@appFaqs');
     Route::post('loginAdmin', 'UserController@loginAdmin');
 });
 Route::group(['prefix' => 'ticket'], function () {
@@ -47,6 +48,12 @@ Route::group(['prefix' => 'ticket'], function () {
     Route::post('getReplies', 'AppTicketsController@getReplies');
     Route::post('sendReply', 'AppTicketsController@sendReply');
     Route::post('sendNotification', 'AppTicketsController@sendNotification');
+
+});
+Route::group(['prefix' => 'staff'], function () {
+
+    Route::post('assignedTickets', 'AppTicketsController@assignedTickets');
+
 
 });
 

@@ -2685,6 +2685,9 @@ body {
 .ticket-status.processing {
     background-color: #460275
 }
+.ticket-status.resolved {
+    background-color: #F48024
+}
 
 #editor1 {
     min-height: 120px;

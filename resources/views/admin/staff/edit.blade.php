@@ -28,6 +28,16 @@
                                 @endif
                                 {{$user->name}}</h1>
                             <hr>
+                                <h1>Active
+                                    <label class="switch">
+                                        @if($user->active=='true')
+                                            <input id="toggle" checked type="checkbox">
+                                        @else
+                                            <input id="toggle" type="checkbox">
+                                        @endif
+                                        <span class="slider round"></span>
+                                    </label></h1>
+                                <hr>
 
                             <div class="form-group">
                                 <label class="control-label">Name*:</label>
@@ -39,11 +49,21 @@
                                 <input type="text" class="form-control" readonly name="username"
                                        value="{{$user->username}}" required/>
                             </div>
+                            <div class="form-group">
+                                <label class="control-label">Phone*:</label>
+                                <input type="number" class="form-control" name="phone"
+                                       value="{{$user->phone}}" required/>
+                            </div>
 
                             <div class="form-group">
                                 <label class="control-label">Email*:</label>
                                 <input type="email" class="form-control" name="email" value="{{$user->email}}"
                                        required/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">New Password*:</label>
+                                <input type="password" class="form-control" name="password"
+                                />
                             </div>
 
                             <div class="form-group">
@@ -168,6 +188,43 @@
     <script>
         $(document).ready(function () {
             $('.file-upload-input').attr('value', '{{$user->avatar}}');
+        });
+        $('#toggle').change(function () {
+            var mode = $(this).prop('checked');
+            var id = $(this).attr('data-id');
+            swal({
+                    title:  mode?'Mark as Active?':'Mark as Inactive',
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes!",
+                    cancelButtonText: "No, cancel!",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        console.log('here');
+                        $.ajax({
+                            type: 'POST',
+                            url: '{{url('/changeuserstatus/')}}',
+                            data: {
+                                'userId':{{$user->id}},
+                                'active': mode,
+                                '_token': '{{csrf_token()}}'
+
+                            },
+                            success: function (data) {
+//                        $('.reply_to_delete').hide();
+//                        swal("Updated", "Reply message has been deleted.", "success");
+                                swal( mode?'Marked as Active':'Marked as Inactive', "Staff has been updated.", "success");
+
+                            }
+                        })
+                    } else {
+                        swal("Cancelled", "Clients is safe :)", "error");
+                    }
+                });
         });
     </script>
 

@@ -33,5 +33,8 @@ class User extends Authenticatable
     public function departments(){
         return $this->belongsTo('App\Departments', 'department_id');
     }
+    public function roles() {
+        return $this->belongsToMany('App\Role');
+    }
 
 }
