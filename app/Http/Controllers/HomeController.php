@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Faq;
 use Illuminate\Http\Request;
 
@@ -12,16 +13,29 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
+    public function index()
+    {
         $faqs = Faq::all();
         $departmetns = [];
-        foreach ($faqs as $faq){
+        foreach ($faqs as $faq) {
             if (in_array($faq['departments']['name'], $departmetns)) {
-            }else{
+            } else {
                 $departmetns[] = $faq['departments']['name'];
             }
         }
         return view('home', compact('faqs', 'departmetns'));
+    }
+
+    public function privacy()
+    {
+
+        return view('privacy');
+    }
+
+    public function terms()
+    {
+
+        return view('terms');
     }
 
 }

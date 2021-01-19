@@ -13,6 +13,8 @@
 
 
 Route::get('/', 'HomeController@index');
+Route::get('/privacy', 'HomeController@privacy');
+Route::get('/terms', 'HomeController@terms');
 
 Auth::routes();
 
