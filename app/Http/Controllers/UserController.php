@@ -183,7 +183,7 @@ class UserController extends Controller
                 $xml = simplexml_load_string($response);
                 echo $response;
                 echo $xml;
-                return ;
+                return $response;
 //                $value = (string)$xml->data[0];
 //
 //                return $value;
