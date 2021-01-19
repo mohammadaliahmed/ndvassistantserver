@@ -181,7 +181,11 @@ class UserController extends Controller
                 curl_close($ch);
 
                 $xml = simplexml_load_string($response);
+                echo $response;
+                echo $xml;
                 $value = (string)$xml->data[0];
+
+                return $value;
 
                 $messageToCustomer = "Your reset code is: " . $code;
                 $messageToCustomer = str_replace(" ", "%20", $messageToCustomer);
