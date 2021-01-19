@@ -30,6 +30,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::post('loginWithId', 'UserController@loginWithId');
     Route::post('userProfile', 'UserController@userProfile');
     Route::post('resetpassword', 'UserController@resetpassword');
+    Route::post('resetpasswordNow', 'UserController@resetpasswordNow');
     Route::post('updateProfile', 'UserController@updateProfile');
     Route::post('sendMail', 'MailController@sendMail');
     Route::post('appFaqs', 'UserController@appFaqs');

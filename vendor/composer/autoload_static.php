@@ -431,6 +431,7 @@ class ComposerStaticInit1ba596836bc58706e7b1191fee53adfa
 
     public static $classMap = array (
         'AddActiveStateToUsers' => __DIR__ . '/../..' . '/database/migrations/2021_01_12_105621_add_active_state_to_users.php',
+        'AddCodeToUsersTable' => __DIR__ . '/../..' . '/database/migrations/2021_01_19_102256_add_code_to_users_table.php',
         'AddMorefieldsToUsersTable' => __DIR__ . '/../..' . '/database/migrations/2020_12_28_101248_add_morefields_to_users_table.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',

@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddActiveStateToUsers' => $baseDir . '/database/migrations/2021_01_12_105621_add_active_state_to_users.php',
+    'AddCodeToUsersTable' => $baseDir . '/database/migrations/2021_01_19_102256_add_code_to_users_table.php',
     'AddMorefieldsToUsersTable' => $baseDir . '/database/migrations/2020_12_28_101248_add_morefields_to_users_table.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',

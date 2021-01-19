@@ -151,38 +151,68 @@ class UserController extends Controller
             ], Response::HTTP_OK);
         } else {
 
-            $user = User::where('email', $request->phone)->first();
+
+            $user = User::where('phone', $request->phone)->first();
             if ($user == null) {
                 return response()->json([
-                    'code' => 302, 'message' => 'This email does not exists',
+                    'code' => 302, 'message' => 'This phone does not exists',
                 ], Response::HTTP_OK);
             } else {
 
-//                $token=Constants::generateRandomString(50);
-//                $passwordRest=PasswordResets::where('email',$request->email)->first();
-//                if($passwordRest==null){
-//                    $passwordRest = new PasswordResets();
-//                    $passwordRest->email = $request->email;
-//                    $passwordRest->token = $token;
-//                    $passwordRest->save();
-//                }else{
-//                    DB::table('password_resets')
-//                        ->where('email', $request->email)
-//                        ->update(['token' => $token]);
-//
-//                }
+                $user = User::find($user->id);
 
+                $code = Constants::generateRandomNumber(6);
+                $user->code = $code;
+                $user->update();
 
-//                $link='http://sahoolat.ndvhs.com/resetpassword/'.$token;
+                $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
+                $xml = simplexml_load_string($response);
+                $value = (string)$xml->data[0];
 
-//                Mail::send('mails.apppasswordreset', ['link'=>$link], function ($message) use ($request) {
-//                    $message->from('support@ndvhs.com', 'NDVHS Sahoolat');
-//                    $message->subject('Password reset');
-//                    $message->to($request->email);
-//                });
+                $messageToCustomer = "Your reset code is: " . $code;
+                $messageToCustomer = str_replace(" ", "%20", $messageToCustomer);
+                $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=" . $value . "&to=92" . substr($request->phone, 1, 11) . "&text=" . $messageToCustomer . "&mask=4B%20Group%20PK";
+
+                $urll = file_get_contents($newUrl);
 
                 return response()->json([
-                    'code' => 302, 'message' => 'false', 'user' => $user
+                    'code' => Response::HTTP_OK, 'message' => 'false', 'user' => $user
+                ], Response::HTTP_OK);
+            }
+        }
+
+    }
+
+    public function resetpasswordNow(Request $request)
+    {
+
+        if ($request->api_username != Constants::$API_USERNAME || $request->api_password != Constants::$API_PASSOWRD) {
+            return response()->json([
+                'code' => Response::HTTP_FORBIDDEN, 'message' => "Wrong api credentials"
+            ], Response::HTTP_OK);
+        } else {
+
+
+            $user = User::where('phone', $request->phone)->first();
+            if ($user == null) {
+                return response()->json([
+                    'code' => 302, 'message' => 'This phone does not exists',
+                ], Response::HTTP_OK);
+            } else {
+
+                $user = User::find($user->id);
+
+                if ($user->code == $request->code) {
+                    $user->password = bcrypt($request->password);
+                    $user->update();
+                } else {
+                    return response()->json([
+                        'code' => Response::HTTP_BAD_REQUEST, 'message' => 'Wrong code. Please check again'
+                    ], Response::HTTP_OK);
+                }
+
+                return response()->json([
+                    'code' => Response::HTTP_OK, 'message' => 'false', 'user' => $user
                 ], Response::HTTP_OK);
             }
         }
@@ -207,7 +237,9 @@ class UserController extends Controller
                 'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user
             ], Response::HTTP_OK);
         }
-    }  public
+    }
+
+    public
     function appFaqs(Request $request)
     {
 
@@ -216,10 +248,10 @@ class UserController extends Controller
                 'code' => Response::HTTP_FORBIDDEN, 'message' => "Wrong api credentials"
             ], Response::HTTP_OK);
         } else {
-           $faqs=Faq::all();
-           foreach($faqs as $faq){
-               $faq->department_name=Departments::find($faq->department_id)->name;
-           }
+            $faqs = Faq::all();
+            foreach ($faqs as $faq) {
+                $faq->department_name = Departments::find($faq->department_id)->name;
+            }
 
             return response()->json([
                 'code' => Response::HTTP_OK, 'message' => "false", 'faqs' => $faqs

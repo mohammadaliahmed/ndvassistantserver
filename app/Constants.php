@@ -16,4 +16,9 @@ class Constants
         return substr(str_shuffle(str_repeat($x = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', ceil($length / strlen($x)))), 1, $length);
     }
 
+    public static function generateRandomNumber($length = 10)
+    {
+        return substr(str_shuffle(str_repeat($x = '0123456789', ceil($length / strlen($x)))), 1, $length);
+    }
+
 }
