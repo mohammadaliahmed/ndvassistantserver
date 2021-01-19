@@ -164,19 +164,11 @@ class UserController extends Controller
                 $code = Constants::generateRandomNumber(6);
                 $user->code = $code;
                 $user->update();
-                $url="https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456";
-                $response = file_get_contents(str_replace("amp;","",$url));
-                $xml = simplexml_load_string($response);
-                $value = (string)$xml->data[0];
-
-                $messageToCustomer = "Your reset code is: " . $code;
-                $messageToCustomer = str_replace(" ", "%20", $messageToCustomer);
-                $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=" . $value . "&to=92" . substr($request->phone, 1, 11) . "&text=" . $messageToCustomer . "&mask=4B%20Group%20PK";
-
-                $urll = file_get_contents($newUrl);
+                $role = DB::table('role_user')->where('user_id', $user->id)->get();
+                $user->role = Role::find($role[0]->role_id)->name;
 
                 return response()->json([
-                    'code' => Response::HTTP_OK, 'message' => 'false', 'user' => $user
+                    'code' => Response::HTTP_OK, 'message' => 'false', 'user' => $user,'usercode'=>$code
                 ], Response::HTTP_OK);
             }
         }
@@ -210,6 +202,8 @@ class UserController extends Controller
                         'code' => Response::HTTP_BAD_REQUEST, 'message' => 'Wrong code. Please check again'
                     ], Response::HTTP_OK);
                 }
+                $role = DB::table('role_user')->where('user_id', $user->id)->get();
+                $user->role = Role::find($role[0]->role_id)->name;
 
                 return response()->json([
                     'code' => Response::HTTP_OK, 'message' => 'false', 'user' => $user
