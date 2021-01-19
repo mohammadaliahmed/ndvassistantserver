@@ -218,7 +218,7 @@ class UserController extends Controller
         } else {
            $faqs=Faq::all();
            foreach($faqs as $faq){
-               $faq->department_name=Departments::find($faq->department_id);
+               $faq->department_name=Departments::find($faq->department_id)->name;
            }
 
             return response()->json([
