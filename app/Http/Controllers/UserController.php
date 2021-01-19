@@ -164,8 +164,8 @@ class UserController extends Controller
                 $code = Constants::generateRandomNumber(6);
                 $user->code = $code;
                 $user->update();
-
-                $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
+                $url="https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456";
+                $response = file_get_contents($url);
                 $xml = simplexml_load_string($response);
                 $value = (string)$xml->data[0];
 
