@@ -164,29 +164,10 @@ class UserController extends Controller
                 $code = Constants::generateRandomNumber(6);
                 $user->code = $code;
                 $user->update();
-                $url = "https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456";
-//                $response = file_get_contents($url);
-
-
-                $ch = curl_init();
-                $timeout = 120;
-                curl_setopt($ch, CURLOPT_URL, $url);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-
-
-                $response = curl_exec($ch);
-                // close handle to release resources
-                curl_close($ch);
-
+                $url="https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456";
+                $response = file_get_contents(str_replace("amp;","",$url));
                 $xml = simplexml_load_string($response);
-                echo $response;
-                echo $xml;
-                return $response;
-//                $value = (string)$xml->data[0];
-//
-//                return $value;
+                $value = (string)$xml->data[0];
 
                 $messageToCustomer = "Your reset code is: " . $code;
                 $messageToCustomer = str_replace(" ", "%20", $messageToCustomer);
