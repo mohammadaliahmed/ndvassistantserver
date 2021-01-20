@@ -9,6 +9,7 @@ return array(
     'AddActiveStateToUsers' => $baseDir . '/database/migrations/2021_01_12_105621_add_active_state_to_users.php',
     'AddCodeToUsersTable' => $baseDir . '/database/migrations/2021_01_19_102256_add_code_to_users_table.php',
     'AddMorefieldsToUsersTable' => $baseDir . '/database/migrations/2020_12_28_101248_add_morefields_to_users_table.php',
+    'AddPhoneToSettingsTable' => $baseDir . '/database/migrations/2021_01_20_041909_add_phone_to_settings_table.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
     'CreateDepartmentsTable' => $baseDir . '/database/migrations/2017_06_02_101318_create_departments_table.php',

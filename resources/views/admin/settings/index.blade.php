@@ -37,19 +37,27 @@
                             @endif
                             <div class="form-group">
                                 <label class="control-label">Name*:</label>
-                                <input type="text" class="form-control" name="name" value="{{$settings->name}}" required/>
+                                <input type="text" class="form-control" name="name" value="{{$settings->name}}"
+                                       required/>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Logo*:</label>
                                 <div class="custom-file-upload logo">
-                                    <input type="file" id="file" name="logo" value="{{$settings->logo}}" accept="image/x-png,image/gif,image/jpeg"/>
+                                    <input type="file" id="file" name="logo" value="{{$settings->logo}}"
+                                           accept="image/x-png,image/gif,image/jpeg"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Email*:</label>
-                                    <input type="email"  name="admin_email" class="form-control" value="{{$settings->admin_email}}"/>
+                                <input type="email" name="admin_email" class="form-control"
+                                       value="{{$settings->admin_email}}"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Phone*:</label>
+                                <input type="number" name="admin_phone" class="form-control" required
+                                       value="{{$settings->admin_phone}}"/>
                             </div>
 
 
@@ -71,23 +79,27 @@
                             <div class="form-group">
                                 <label class="control-label">Footer Logo*:</label>
                                 <div class="custom-file-upload footer_logo">
-                                    <input type="file" id="file" name="footer_logo" value="{{$settings->footer_logo}}" accept="image/x-png,image/gif,image/jpeg"/>
+                                    <input type="file" id="file" name="footer_logo" value="{{$settings->footer_logo}}"
+                                           accept="image/x-png,image/gif,image/jpeg"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Footer Description*:</label>
-                                <textarea class="form-control" name="footer_description">{{$settings->footer_description}}</textarea>
+                                <textarea class="form-control"
+                                          name="footer_description">{{$settings->footer_description}}</textarea>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Copyrights*:</label>
-                                <input type="text" class="form-control" name="copyrights" value="{{$settings->copyrights}}"/>
+                                <input type="text" class="form-control" name="copyrights"
+                                       value="{{$settings->copyrights}}"/>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Facebook:</label>
-                                <input type="text" class="form-control" name="facebook" value="{{$settings->facebook}}"/>
+                                <input type="text" class="form-control" name="facebook"
+                                       value="{{$settings->facebook}}"/>
                             </div>
 
                             <div class="form-group">
@@ -97,7 +109,8 @@
 
                             <div class="form-group">
                                 <label class="control-label">Linkedin:</label>
-                                <input type="text" class="form-control" name="linkedin" value="{{$settings->linkedin}}"/>
+                                <input type="text" class="form-control" name="linkedin"
+                                       value="{{$settings->linkedin}}"/>
                             </div>
 
                             <br>
@@ -108,24 +121,31 @@
                             <div class="form-group">
                                 <label class="control-label">Send Email on New Ticket*:</label>
                                 <select name="ticket_email" class="form-control">
-                                    <option value="yes" {{($settings->ticket_email) == 'yes' ? 'selected' : ''}}>Yes</option>
-                                    <option value="no" {{($settings->ticket_email) == 'no' ? 'selected' : ''}}>No</option>
+                                    <option value="yes" {{($settings->ticket_email) == 'yes' ? 'selected' : ''}}>Yes
+                                    </option>
+                                    <option value="no" {{($settings->ticket_email) == 'no' ? 'selected' : ''}}>No
+                                    </option>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Client Can Edit Tickets*:</label>
                                 <select name="client_can_edit" class="form-control">
-                                    <option value="yes" {{($settings->client_can_edit) == 'yes' ? 'selected' : ''}}>Yes</option>
-                                    <option value="no" {{($settings->client_can_edit) == 'no' ? 'selected' : ''}}>No</option>
+                                    <option value="yes" {{($settings->client_can_edit) == 'yes' ? 'selected' : ''}}>
+                                        Yes
+                                    </option>
+                                    <option value="no" {{($settings->client_can_edit) == 'no' ? 'selected' : ''}}>No
+                                    </option>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Staff Can Edit Tickets*:</label>
                                 <select name="staff_can_edit" class="form-control">
-                                    <option value="yes" {{($settings->staff_can_edit) == 'yes' ? 'selected' : ''}}>Yes</option>
-                                    <option value="no" {{($settings->staff_can_edit) == 'no' ? 'selected' : ''}}>No</option>
+                                    <option value="yes" {{($settings->staff_can_edit) == 'yes' ? 'selected' : ''}}>Yes
+                                    </option>
+                                    <option value="no" {{($settings->staff_can_edit) == 'no' ? 'selected' : ''}}>No
+                                    </option>
                                 </select>
                             </div>
 

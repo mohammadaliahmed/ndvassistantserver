@@ -16,16 +16,20 @@
         <div class="login">
             <div class="container">
                 <div class="col-md-6">
+
                     <div class="login-area">
                         <div class="login-front">
                             <div>
-                                <img width="250" src="{{asset('uploads')}}/full_logo.png"  alt="logo">
-                                <p>
-                                    {{$settings['footer_description']}}
-                                </p>
+                                <center>
+                                    <img width="250" src="{{asset('uploads')}}/full_logo.png" alt="logo">
+                                    <p>
+                                        {{$settings['footer_description']}}
+                                    </p>
+                                </center>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="col-md-6">
                     <div class="login-text">
@@ -47,7 +51,9 @@
                                     <div class="icon">
                                         <span class="fa fa-user" aria-hidden="true"></span>
                                     </div>
-                                    <input id="username" type="text" class="form-control" placeholder="username or email" name="username" value="{{ old('username') }}" autofocus>
+                                    <input id="username" type="text" class="form-control"
+                                           placeholder="username or email" name="username" value="{{ old('username') }}"
+                                           autofocus>
                                 </div>
 
                                 <div class="form-group">

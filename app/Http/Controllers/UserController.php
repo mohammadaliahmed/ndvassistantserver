@@ -6,6 +6,7 @@ use App\Constants;
 use App\Departments;
 use App\Faq;
 use App\PasswordResets;
+use App\Settings;
 use App\User;
 use App\Role;
 use Illuminate\Auth\Events\PasswordReset;
@@ -227,8 +228,9 @@ class UserController extends Controller
             $user->update();
             $role = DB::table('role_user')->where('user_id', $user->id)->get();
             $user->role = Role::find($role[0]->role_id)->name;
+            $settings=Settings::all()->first();
             return response()->json([
-                'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user
+                'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user,"admin_phone"=>$settings->admin_phone
             ], Response::HTTP_OK);
         }
     }

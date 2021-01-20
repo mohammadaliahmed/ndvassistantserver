@@ -31,7 +31,7 @@ class AppTicketsController extends Controller
             foreach ($tickets as $ticket) {
                 if ($ticket->assigned_to != null) {
                     $ticket->staff = User::find($ticket->assigned_to);
-                    $ticket->user=User::find($ticket->user_id);
+                    $ticket->user = User::find($ticket->user_id);
                 }
             }
             return response()->json([
@@ -205,16 +205,10 @@ class AppTicketsController extends Controller
             $ticket->priority = $request->priority;
             $ticket->status = 'open';
             $ticket->save();
-
-
             $title = $request->title;
             $ticket_id = $ticket->id;
             $user_name = User::find($request->id)->name;
-
-//
             if ($request->has('liveUrl')) {
-
-
                 $files = new Files();
                 $files->name = $request->liveUrl;
                 $files->user_id = $request->id;
@@ -226,50 +220,27 @@ class AppTicketsController extends Controller
             foreach ($users as $user) {
                 if ($user->hasRole('admin')) {
                     $user->notify(new NewTicket($title, $user_name, $ticket_id));
-
                 }
             }
             $settings = Settings::all()->first();
             $usr = User::find($request->id);
-
             $department = Departments::find($request->department_id);
+
+
             Mail::send('mails.appthanks', ['ticket' => $request, 'department' => $department, 'username' => $usr->name, 'subject' => $request->title], function ($message) use ($settings) {
                 $message->from('support@ndvhs.com', 'NDVHS Sahoolat');
                 $message->subject('New Ticket Created');
                 $message->to($settings->admin_email);
             });
 
-
-            $this->sendMessage($usr, $ticket);
-
-
             return response()->json([
-                'code' => Response::HTTP_OK, 'message' => "false"
+                'code' => Response::HTTP_OK, 'message' => "false", 'ticket' => $ticket
                 ,
             ], Response::HTTP_OK);
 
         }
     }
 
-    public function sendMessage($user, $ticket)
-    {
-        $response = file_get_contents('https://telenorcsms.com.pk:27677/corporate_sms2/api/auth.jsp?msisdn=923453480541&password=yahoo123456');
-        $xml = simplexml_load_string($response);
-        $value = (string)$xml->data[0];
-
-
-        $messageToAdmin = "New ticket has been created by " . $user->name . '. House:' . $user->housenumber . " " . $user->block . ". Token:" . $ticket->token_no . '. Date: ' . $ticket->created_at;
-        $messageToAdmin = str_replace(" ", "%20", $messageToAdmin);
-        $messageToACustomer = "Your ticket has been submitted" . ". Token:" . $ticket->token_no . '. Date: ' . $ticket->created_at;;
-        $messageToACustomer = str_replace(" ", "%20", $messageToACustomer);
-        $phone = $user->phone;
-
-        $newUrl = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=" . $value . "&to=92" . substr($phone, 1, 11) . "&text=" . $messageToAdmin . "&mask=4B%20Group%20PK";
-        $newUrl2 = "https://telenorcsms.com.pk:27677/corporate_sms2/api/sendsms.jsp?session_id=" . $value . "&to=92" . substr($phone, 1, 11) . "&text=" . $messageToACustomer . "&mask=4B%20Group%20PK";
-
-        $urll = file_get_contents($newUrl);
-        $url2 = file_get_contents($newUrl2);
-    }
 
     public function sendMail()
     {

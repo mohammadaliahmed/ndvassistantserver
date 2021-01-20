@@ -19,10 +19,12 @@
                     <div class="login-area">
                         <div class="login-front">
                             <div>
-                                <img width="250" src="{{asset('uploads')}}/full_logo.png" alt="logo">
-                                <p>
-                                    {{$settings->footer_description}}
-                                </p>
+                                <center>
+                                    <img width="250" src="{{asset('uploads')}}/full_logo.png" alt="logo">
+                                    <p>
+                                        {{$settings->footer_description}}
+                                    </p>
+                                </center>
                             </div>
                         </div>
                     </div>
@@ -104,7 +106,8 @@
                                     <div class="icon">
                                         <span class="fa fa-home" aria-hidden="true"></span>
                                     </div>
-                                    <input type="text" placeholder="House number" name="housenumber" value="{{old('housenumber')}}"
+                                    <input type="text" placeholder="House number" name="housenumber"
+                                           value="{{old('housenumber')}}"
                                            class="form-control" required>
                                 </div>
                             </div>

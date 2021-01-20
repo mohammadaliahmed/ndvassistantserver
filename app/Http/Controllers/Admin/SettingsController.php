@@ -24,6 +24,7 @@ class SettingsController extends Controller
             'ticket_email' => 'required',
             'copyrights' => 'required',
             'admin_email' => 'required',
+            'admin_phone' => 'required',
             'description' => 'required',
             'footer_description' => 'required',
             'facebook' => 'required',
@@ -35,6 +36,7 @@ class SettingsController extends Controller
         $settings = Settings::find($request->id);
         $settings->name = $request->name;
         $settings->keywords = $request->keywords;
+        $settings->admin_phone = $request->admin_phone;
         $settings->description = $request->description;
         $settings->footer_description = $request->footer_description;
         $settings->client_can_edit = $request->client_can_edit;
