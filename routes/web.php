@@ -90,6 +90,6 @@ Route::get('/markAsRead', function (){
     Auth::user()->notifications->markAsRead();
 });
 
-Route::any('{catchall}', function() {
-    return redirect('/');
-})->where('catchall', '.*');
+//Route::any('{catchall}', function() {
+//    return redirect('/');
+//})->where('catchall', '.*');
