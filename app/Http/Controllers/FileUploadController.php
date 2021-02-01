@@ -12,8 +12,8 @@ class FileUploadController extends Controller
         $milliseconds = round(microtime(true) * 1000);
         if ($request->has('photo')) {
             $file_name = $milliseconds . '.jpg';
-            $path = $request->file('photo')->move(public_path("../storage/app"), $file_name);
-            $photo_url = url('../storage/app/' . $file_name);
+            $path = $request->file('photo')->move(public_path("../storage/app/public/"), $file_name);
+            $photo_url = url('../storage/app/public/' . $file_name);
             echo $file_name;
 //            return response()->json([
 //                'code' => Response::HTTP_OK, 'message' => "false", 'url' => $file_name
