@@ -411,7 +411,7 @@ class TicketsController extends Controller
     {
 
         $path = storage_path('app/') . $file_name;
-        return response()->download($path);
+        return response()->file($path);
     }
 
     public function assignTicket(Request $request, $id)
