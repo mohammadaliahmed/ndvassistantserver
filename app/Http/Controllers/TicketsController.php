@@ -410,7 +410,7 @@ class TicketsController extends Controller
     public function download($file_name)
     {
 
-        $path = storage_path('app/') . $file_name;
+        $path = storage_path('app/public/') . $file_name;
         return response()->download($path);
     }
 
