@@ -411,6 +411,7 @@ class TicketsController extends Controller
     {
 
         $path = storage_path('app/') . $file_name;
+        return $path;
         return response()->file($path);
     }
 
