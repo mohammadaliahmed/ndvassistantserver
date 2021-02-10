@@ -108,8 +108,15 @@ class UserController extends Controller
                 $user->avatar = $request->liveUrl;
             }
             $user->update();
+
+            $user = DB::table('users')->where('phone', $request->phone)->first();
             $role = DB::table('role_user')->where('user_id', $user->id)->get();
             $user->role = Role::find($role[0]->role_id)->name;
+
+
+
+
+
             return response()->json([
                 'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user
                 ,
