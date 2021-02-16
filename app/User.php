@@ -30,6 +30,10 @@ class User extends Authenticatable
         'password', 'remember_token','code','fcmKey'
     ];
 
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
     public function departments(){
         return $this->belongsTo('App\Departments', 'department_id');
     }

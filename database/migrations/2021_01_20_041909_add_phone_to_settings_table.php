@@ -29,9 +29,6 @@ class AddPhoneToSettingsTable extends Migration
     public function down()
     {
         //
-        Schema::table('settings', function (Blueprint $table) {
-            //
-
-        });
+        Schema::dropIfExists('settings');
     }
 }
