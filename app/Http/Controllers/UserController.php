@@ -76,6 +76,7 @@ class UserController extends Controller
                     $role = Role::where('name', 'client')->first();
                     $user->roles()->attach($role->id);
                     $user->save();
+                    $user->id=(int)$user->id;
                     return response()->json([
                         'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user
                         ,
@@ -97,6 +98,7 @@ class UserController extends Controller
             ], Response::HTTP_OK);
         } else {
             $user = User::find($request->id);
+            $user->id=(int)$user->id;
             $user->name = $request->name;
             $user->phone = $request->phone;
             $user->gender = $request->gender;
@@ -137,6 +139,7 @@ class UserController extends Controller
 
             if (Auth::attempt(['phone' => $request->phone, 'password' => $request->password])) {
                 $user = DB::table('users')->where('phone', $request->phone)->first();
+                $user->id=(int)$user->id;
                 $role = DB::table('role_user')->where('user_id', $user->id)->get();
                 $user->role = Role::find($role[0]->role_id)->name;
                 return response()->json([
@@ -215,7 +218,7 @@ class UserController extends Controller
                 }
                 $role = DB::table('role_user')->where('user_id', $user->id)->get();
                 $user->role = Role::find($role[0]->role_id)->name;
-
+                $user->id=(int)$user->id;
                 return response()->json([
                     'code' => Response::HTTP_OK, 'message' => 'false', 'user' => $user
                 ], Response::HTTP_OK);
@@ -239,6 +242,7 @@ class UserController extends Controller
             $role = DB::table('role_user')->where('user_id', $user->id)->get();
             $user->role = Role::find($role[0]->role_id)->name;
             $settings=Settings::all()->first();
+            $user->id=(int)$user->id;
             return response()->json([
                 'code' => Response::HTTP_OK, 'message' => "false", 'user' => $user,"admin_phone"=>$settings->admin_phone
             ], Response::HTTP_OK);
