@@ -180,7 +180,7 @@ class UserController extends Controller
                 $user->update();
                 $role = DB::table('role_user')->where('user_id', $user->id)->get();
                 $user->role = Role::find($role[0]->role_id)->name;
-
+                $user->id=(int)$user->id;
                 return response()->json([
                     'code' => Response::HTTP_OK, 'message' => 'false', 'user' => $user,'usercode'=>$code
                 ], Response::HTTP_OK);
