@@ -115,7 +115,7 @@ class UserController extends Controller
             $role = DB::table('role_user')->where('user_id', $user->id)->get();
             $user->role = Role::find($role[0]->role_id)->name;
 
-
+            $user->id=(int)$user->id;
 
 
 
