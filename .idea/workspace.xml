@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddcf3b20-6487-4831-afa5-70eb5e874da7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="250" column="0" lean-forward="true" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+            <state relative-caret-position="392">
+              <caret line="112" column="12" lean-forward="false" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -79,7 +79,6 @@
       <find>create</find>
       <find>tr</find>
       <find>try</find>
-      <find>update</find>
       <find>replies</find>
       <find>getReplies</find>
       <find>url</find>
@@ -88,6 +87,7 @@
       <find>storage</find>
       <find>updatef</find>
       <find>login</find>
+      <find>update</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -420,12 +420,12 @@
       <workItem from="1612163785642" duration="103000" />
       <workItem from="1612174756531" duration="7401000" />
       <workItem from="1612949040403" duration="856000" />
-      <workItem from="1613454899547" duration="3645000" />
+      <workItem from="1613454899547" duration="4248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185806000" />
+    <option name="totallyTimeSpent" value="186409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -872,8 +872,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="250" column="0" lean-forward="true" selection-start-line="250" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
+        <state relative-caret-position="392">
+          <caret line="112" column="12" lean-forward="false" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
           <folding />
         </state>
       </provider>
