@@ -56,6 +56,11 @@
                                 <input type="email" class="form-control" name="email" value="{{$user->email}}"
                                        required/>
                             </div>
+                            <div class="form-group">
+                                <label class="control-label">Phone*:</label>
+                                <input type="number" class="form-control" name="phone" value="{{$user->phone}}"
+                                       required/>
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">House #:</label>
@@ -184,41 +189,41 @@
 
         $('#toggle').change(function () {
             var mode = $(this).prop('checked');
-                var id = $(this).attr('data-id');
-                swal({
-                        title:  mode?'Mark as Active?':'Mark as Inactive',
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Yes!",
-                        cancelButtonText: "No, cancel!",
-                        closeOnConfirm: false,
-                        closeOnCancel: true
-                    },
-                    function (isConfirm) {
-                        if (isConfirm) {
-                            console.log('here');
-                            $.ajax({
-                                type: 'POST',
-                                url: '{{url('/changeuserstatus/')}}',
-                                data: {
-                                    'userId':{{$user->id}},
-                                    'active': mode,
-                                    '_token': '{{csrf_token()}}'
+            var id = $(this).attr('data-id');
+            swal({
+                    title: mode ? 'Mark as Active?' : 'Mark as Inactive',
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes!",
+                    cancelButtonText: "No, cancel!",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        console.log('here');
+                        $.ajax({
+                            type: 'POST',
+                            url: '{{url('/changeuserstatus/')}}',
+                            data: {
+                                'userId':{{$user->id}},
+                                'active': mode,
+                                '_token': '{{csrf_token()}}'
 
-                                },
-                                success: function (data) {
+                            },
+                            success: function (data) {
 //                        $('.reply_to_delete').hide();
 //                        swal("Updated", "Reply message has been deleted.", "success");
-                                    swal( mode?'Marked as Active':'Marked as Inactive', "Customer has been updated.", "success");
+                                swal(mode ? 'Marked as Active' : 'Marked as Inactive', "Customer has been updated.", "success");
 
-                                }
-                            })
-                        } else {
-                            swal("Cancelled", "Clients is safe :)", "error");
-                        }
-                    });
-            });
+                            }
+                        })
+                    } else {
+                        swal("Cancelled", "Clients is safe :)", "error");
+                    }
+                });
+        });
 
 
 
@@ -226,27 +231,27 @@
 
 
         {{--$('#toggle').change(function () {--}}
-            {{--var mode = $(this).prop('checked');--}}
-            {{--console.log(mode);--}}
-            {{--// // submit the form--}}
-            {{--// $(#myForm).ajaxSubmit();--}}
-            {{--// // return false to prevent normal browser submit and page navigation--}}
-            {{--// return false;--}}
-            {{--$.ajax({--}}
-                {{--type: 'POST',--}}
-                {{--url: '{{url('/changeuserstatus/')}}',--}}
-                {{--data: {--}}
-                    {{--'userId':{{$user->id}},--}}
-                    {{--'active': mode,--}}
-                    {{--'_token': '{{csrf_token()}}'--}}
+        {{--var mode = $(this).prop('checked');--}}
+        {{--console.log(mode);--}}
+        {{--// // submit the form--}}
+        {{--// $(#myForm).ajaxSubmit();--}}
+        {{--// // return false to prevent normal browser submit and page navigation--}}
+        {{--// return false;--}}
+        {{--$.ajax({--}}
+        {{--type: 'POST',--}}
+        {{--url: '{{url('/changeuserstatus/')}}',--}}
+        {{--data: {--}}
+        {{--'userId':{{$user->id}},--}}
+        {{--'active': mode,--}}
+        {{--'_token': '{{csrf_token()}}'--}}
 
-                {{--},--}}
-                {{--success: function (data) {--}}
-{{--//                        $('.reply_to_delete').hide();--}}
-{{--//                        swal("Updated", "Reply message has been deleted.", "success");--}}
+        {{--},--}}
+        {{--success: function (data) {--}}
+        {{--//                        $('.reply_to_delete').hide();--}}
+        {{--//                        swal("Updated", "Reply message has been deleted.", "success");--}}
 
-                {{--}--}}
-            {{--})--}}
+        {{--}--}}
+        {{--})--}}
         {{--});--}}
 
     </script>
