@@ -14,9 +14,9 @@
         </div>
     </section>
 
-    <section id="login-role">
-            <div class="login-role">
-                <div class="container">
+    {{--<section id="login-role">--}}
+            {{--<div class="login-role">--}}
+                {{--<div class="container">--}}
                 {{--<div class="text-area">--}}
 
                     {{--<h1>Try Login With Different Roles</h1>--}}
@@ -58,9 +58,9 @@
                     {{--</div>--}}
 
                 {{--</div>--}}
-            </div>
-        </div>
-    </section>
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
 
 
     <div class="content faq">
