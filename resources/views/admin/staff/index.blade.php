@@ -27,7 +27,7 @@
                                             <th class="heading">Email</th>
                                             <th class="heading">Avatar</th>
                                             <th class="heading">Department</th>
-                                            <th class="heading">Registered On</th>
+                                            <th class="heading">Phone</th>
                                             <th class="heading">Action</th>
 
                                         </tr>
@@ -61,7 +61,7 @@
 
                                                         @endif
                                                     </td>
-                                                    <td>{{$user->created_at}}</td>
+                                                    <td>{{$user->phone}}</td>
                                                     <td>
                                                         <a href="{{url('admin/staff')}}/{{$user->id}}/edit" class="eye">
                                                             <i class="fa fa-pencil"></i></a>

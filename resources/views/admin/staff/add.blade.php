@@ -29,17 +29,24 @@
 
                             <div class="form-group">
                                 <label class="control-label">User Name*:</label>
-                                <input type="text" class="form-control" name="username" value="{{ old('username') }}" required/>
+                                <input type="text" class="form-control" name="username" value="{{ old('username') }}"
+                                       required/>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Email*:</label>
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" required/>
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}"
+                                       required/>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Phone*:</label>
+                                <input type="number" class="form-control" name="phone" value="{{ old('phone') }}"
+                                       required/>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Password*:</label>
-                                <input type="password" class="form-control" name="password"  required/>
+                                <input type="password" class="form-control" name="password" required/>
                             </div>
 
                             <div class="form-group">
@@ -61,7 +68,8 @@
 
                             <div class="form-group">
                                 <label class="control-label">Designation*:</label>
-                                <input type="text" class="form-control" name="designation" value="{{ old('designation') }}" required/>
+                                <input type="text" class="form-control" name="designation"
+                                       value="{{ old('designation') }}" required/>
                             </div>
 
                             <div class="submit-button">

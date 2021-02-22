@@ -50,12 +50,14 @@ class StaffController extends Controller
             'username' => 'required|alpha_dash|max:100|unique:users',
             'email' => 'required|email|max:100|unique:users',
             'password' => 'required|min:6',
+            'phone' => 'required|min:10',
             'designation' => 'required',
         ]);
         $user = new User();
         $user->name = $request->name;
         $user->username = $request->username;
         $user->email = $request->email;
+        $user->phone = $request->phone;
         $user->password = bcrypt($request->password);
         $user->designation = $request->designation;
         $user->department_id = $request->department;
