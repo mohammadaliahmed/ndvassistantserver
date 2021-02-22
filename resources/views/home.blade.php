@@ -3,63 +3,83 @@
 
 @section('content')
 
+
     <section id="follow-ticket">
         <div class="follow-ticket">
-            <div class="follow-text">
-                <div class="container">
+            <div class="col-md-6">
 
-                    <a href="{{url('/new/ticket')}}" class="btn btn-default">Create New Ticket</a>
+                <div class="login-area">
+                    <div class="login-front">
+                        <div>
+
+                                <img width="250" src="{{asset('uploads')}}/full_logo.png" alt="logo">
+                                <p>
+                                </p>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-6">
+
+                <div class="follow-text mg-2" >
+
+                    <a href="{{url('/new/ticket')}}" class="btn btn-default">Create New Ticket</a>
+
+                </div>
+
+
+            </div>
+
         </div>
+
     </section>
-
     {{--<section id="login-role">--}}
-            {{--<div class="login-role">--}}
-                {{--<div class="container">--}}
-                {{--<div class="text-area">--}}
+    {{--<div class="login-role">--}}
+    {{--<div class="container">--}}
+    {{--<div class="text-area">--}}
 
-                    {{--<h1>Try Login With Different Roles</h1>--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-offset-2 col-md-8">--}}
-                            {{--<div class="row">--}}
-                                {{--<div class="col-sm-4">--}}
-                                    {{--<div class="login-home-box">--}}
-                                        {{--<h3><i class="fa fa-user"></i> Admin</h3>--}}
-                                        {{--<ul>--}}
-                                            {{--<li>--}}
-                                                {{--<i class="fa fa-user"></i><strong>username:</strong> admin</li>--}}
-                                            {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
+    {{--<h1>Try Login With Different Roles</h1>--}}
+    {{--<div class="row">--}}
+    {{--<div class="col-md-offset-2 col-md-8">--}}
+    {{--<div class="row">--}}
+    {{--<div class="col-sm-4">--}}
+    {{--<div class="login-home-box">--}}
+    {{--<h3><i class="fa fa-user"></i> Admin</h3>--}}
+    {{--<ul>--}}
+    {{--<li>--}}
+    {{--<i class="fa fa-user"></i><strong>username:</strong> admin</li>--}}
+    {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
 
-                                        {{--</ul>--}}
-                                    {{--</div>--}}
+    {{--</ul>--}}
+    {{--</div>--}}
 
-                                {{--</div>--}}
-                                {{--<div class="col-sm-4">--}}
-                                    {{--<div class="login-home-box">--}}
-                                        {{--<h3><i class="fa fa-user"></i> Client</h3>--}}
-                                        {{--<ul>--}}
-                                            {{--<li><i class="fa fa-user"></i><strong>username:</strong> client</li>--}}
-                                            {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
-                                        {{--</ul>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-sm-4">--}}
-                                    {{--<div class="login-home-box">--}}
-                                        {{--<h3><i class="fa fa-user"></i> Staff</h3>--}}
-                                        {{--<ul>--}}
-                                            {{--<li><i class="fa fa-user"></i><strong>username:</strong> staff</li>--}}
-                                            {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
-                                        {{--</ul>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="col-sm-4">--}}
+    {{--<div class="login-home-box">--}}
+    {{--<h3><i class="fa fa-user"></i> Client</h3>--}}
+    {{--<ul>--}}
+    {{--<li><i class="fa fa-user"></i><strong>username:</strong> client</li>--}}
+    {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
+    {{--</ul>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="col-sm-4">--}}
+    {{--<div class="login-home-box">--}}
+    {{--<h3><i class="fa fa-user"></i> Staff</h3>--}}
+    {{--<ul>--}}
+    {{--<li><i class="fa fa-user"></i><strong>username:</strong> staff</li>--}}
+    {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
+    {{--</ul>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
 
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
     {{--</section>--}}
 
 

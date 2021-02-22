@@ -58,9 +58,9 @@ body {
 
 .follow-ticket {
     align-items: center;
-    background: linear-gradient(-90deg, #4F92C6, #213C51);
+    background: linear-gradient(-90deg, #1D73AD, #1D73AD);
     display: flex;
-    height: 217px;
+    height: 350px;
     justify-content: center;
     text-align: center
 }
