@@ -48,7 +48,8 @@
                                 <label class="control-label">Password*:</label>
                                 <input type="password" class="form-control" name="password" required/>
                             </div>
-                                <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="col-md-6" style="padding-left: 0px !important;">
                                     <div class="form-group">
                                         <label class="control-label">House #:</label>
                                         <input type="number" class="form-control" name="housenumber"
@@ -56,13 +57,14 @@
                                                required/>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" style="padding-right: 0px !important;">
                                     <div class="form-group">
                                         <label class="control-label">Block*:</label>
                                         <input type="text" class="form-control" name="block" value="{{$user->block}}"
                                                required/>
                                     </div>
                                 </div>
+                            </div>
 
                             <div class="form-group">
                                 <label class="control-label">Avatar:</label>

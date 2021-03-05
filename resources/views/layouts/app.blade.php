@@ -19,7 +19,18 @@
     <link rel="stylesheet" href="{{asset('plugin/slick/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
+    <style>
+        /* custonm */
+        .padding-px-left{
+            padding-left: 0px !important;
+        }
+
+        .padding-px-right{
+            padding-right: 0px !important;
+        }
+    </style>
 
 
     <link rel="icon" href="{{asset('images/fav.png')}}" type="image/x-icon"/>
@@ -57,7 +68,7 @@
                     @endif
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle clearfix" data-toggle="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             Notifications <span class="badge">{{count(Auth::user()->unreadNotifications)}}</span>
                         </a>
                         <ul class="dropdown-menu notification_dropdown">
@@ -98,7 +109,7 @@
                     </li>
 
                     <li class="dropdown profile">
-                        <a href="#" class="dropdown-toggle clearfix" data-toggle="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             @if(Auth::user()->avatar == null)
                                 <span class="avatar"><img src="{{asset('uploads/avatar.png')}}" alt="avatar"></span>
                             @else

@@ -1115,3 +1115,12 @@ table.dataTable.no-footer {
 }
 
 /*# sourceMappingURL=custom.css.map */
+
+/* custonm */
+.padding-px-left{
+    padding-left: 0px !important;
+}
+
+.padding-px-right{
+    padding-right: 0px !important;
+}

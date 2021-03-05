@@ -222,7 +222,7 @@
                             }
                         })
                     } else {
-                        swal("Cancelled", "Clients is safe :)", "error");
+                        swal("Cancelled", "Resident is safe :)", "error");
                     }
                 });
         });

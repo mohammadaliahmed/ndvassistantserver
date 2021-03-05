@@ -61,7 +61,7 @@
                                 <input type="number" class="form-control" name="phone" value="{{$user->phone}}"
                                        required/>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6" style="padding-left: 0px !important;">
                                 <div class="form-group">
                                     <label class="control-label">House #:</label>
                                     <input type="number" class="form-control" name="housenumber"
@@ -69,7 +69,7 @@
                                            required/>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6" style="padding-rightgi: 0px !important;">
                                 <div class="form-group">
                                     <label class="control-label">Block*:</label>
                                     <input type="text" class="form-control" name="block" value="{{$user->block}}"
@@ -220,7 +220,7 @@
                             }
                         })
                     } else {
-                        swal("Cancelled", "Clients is safe :)", "error");
+                        swal("Cancelled", "Resident is safe :)", "error");
                     }
                 });
         });

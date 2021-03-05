@@ -101,8 +101,8 @@
                                        class="form-control" required>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="form-group">
+                            <div class="col-md-6" style="padding-left: 0px !important;">
+                                <div class="form-group"  >
                                     <div class="icon">
                                         <span class="fa fa-home" aria-hidden="true"></span>
                                     </div>
@@ -111,7 +111,7 @@
                                            class="form-control" required>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6"  style="padding-right: 0px !important;">
                                 <div class="form-group">
                                     <div class="icon">
                                         <span class="fa fa-home" aria-hidden="true"></span>

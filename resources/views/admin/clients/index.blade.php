@@ -1,5 +1,5 @@
 @extends('layouts.tickets')
-@section('title', 'Clients List')
+@section('title', 'Residents List')
 @section('content')
     <div class="page-content">
         <section id="category-one">
