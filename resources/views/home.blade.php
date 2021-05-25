@@ -12,9 +12,9 @@
                     <div class="login-front">
                         <div>
 
-                                <img width="250" src="{{asset('uploads')}}/full_logo.png" alt="logo">
-                                <p>
-                                </p>
+                            <img width="250" src="{{asset('uploads')}}/full_logo.png" alt="logo">
+                            <p>
+                            </p>
 
                         </div>
                     </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-6">
 
-                <div class="follow-text mg-2" >
+                <div class="follow-text mg-2">
 
                     <a href="{{url('/new/ticket')}}" class="btn btn-default">Create New Ticket</a>
 
@@ -34,53 +34,60 @@
         </div>
 
     </section>
-    {{--<section id="login-role">--}}
-    {{--<div class="login-role">--}}
-    {{--<div class="container">--}}
-    {{--<div class="text-area">--}}
+    <hr>
+    <div style="background-color: #213C51" class="row">
+        <div class="container">
+            <div class="col-md-6">
 
-    {{--<h1>Try Login With Different Roles</h1>--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-md-offset-2 col-md-8">--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-sm-4">--}}
-    {{--<div class="login-home-box">--}}
-    {{--<h3><i class="fa fa-user"></i> Admin</h3>--}}
-    {{--<ul>--}}
-    {{--<li>--}}
-    {{--<i class="fa fa-user"></i><strong>username:</strong> admin</li>--}}
-    {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
+                <center><h1 style="color: #fff; margin-top: 200px;">
+                        NDVHS SAHOOLAT
 
-    {{--</ul>--}}
-    {{--</div>--}}
+                    </h1>
+                    <p style="color: #fff; margin-top: 20px;">
+                        Download and register complaints via the app
 
-    {{--</div>--}}
-    {{--<div class="col-sm-4">--}}
-    {{--<div class="login-home-box">--}}
-    {{--<h3><i class="fa fa-user"></i> Client</h3>--}}
-    {{--<ul>--}}
-    {{--<li><i class="fa fa-user"></i><strong>username:</strong> client</li>--}}
-    {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--<div class="col-sm-4">--}}
-    {{--<div class="login-home-box">--}}
-    {{--<h3><i class="fa fa-user"></i> Staff</h3>--}}
-    {{--<ul>--}}
-    {{--<li><i class="fa fa-user"></i><strong>username:</strong> staff</li>--}}
-    {{--<li><i class="fa fa-lock"></i><strong>Password:</strong> 12345678</li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
+                    </p>
 
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</div>--}}
-    {{--</section>--}}
+
+                    <a href="https://apps.apple.com/us/app/ndvhs-sahoolat/id1554987413">
+                        <img width="300" src="{{asset('uploads')}}/get_it_on_app_store.png">
+                    </a>
+                </center>
+
+            </div>
+            <div class="col-md-6">
+                <img width="500" src="{{asset('uploads')}}/iphone_mockup.png">
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div style="background-color: #213C51" class="row">
+
+        <div class="col-md-6">
+            <center>
+                <img width="400" src="{{asset('uploads')}}/note_10.png">
+            </center>
+        </div>
+        <div class="col-md-6">
+
+            <center><h1 style="color: #fff; margin-top: 200px;">
+                    NDVHS SAHOOLAT
+
+                </h1>
+                <p style="color: #fff; margin-top: 20px;">
+                    Download and register complaints via the app
+
+                </p>
+
+
+                <a href="play store">
+                    <img width="300" src="{{asset('uploads')}}/get_it_on_play_store.png">
+                </a>
+            </center>
+
+        </div>
+    </div>
 
 
     <div class="content faq">
