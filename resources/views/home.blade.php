@@ -81,7 +81,7 @@
                 </p>
 
 
-                <a href="play store">
+                <a href="sahoolat.apk">
                     <img width="300" src="{{asset('uploads')}}/get_it_on_play_store.png">
                 </a>
             </center>
